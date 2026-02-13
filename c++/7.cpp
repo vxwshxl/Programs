@@ -1,4 +1,4 @@
-// 7. Write a parameterized constructor in c++ to input a term and print the factorial of that term
+// 7. Write a parameterized constructor in c++ to input a term and print the factorial of that term.
 
 #include <iostream>
 using namespace std;
