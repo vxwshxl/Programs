@@ -5,10 +5,10 @@
 using namespace std;
 
 class swap1 {
-int x1,y1;
-public:
-  swap1();
-  swap1(int,int);
+  int x1,y1;
+  public:
+    swap1();
+    swap1(int,int);
 };
 
 swap1::swap1() {

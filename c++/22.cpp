@@ -1,4 +1,4 @@
-//22. Write a program in c++ to input the values of length and breadth and print the perimeter of the rectangle using a file name student.doc
+// 22. Write a program in c++ to input the values of length and breadth and print the perimeter of the rectangle using a file name student.doc
 
 #include<iostream>
 #include<fstream>

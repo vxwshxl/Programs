@@ -4,24 +4,24 @@
 #define decibin main
 using namespace std;
 
-int decibin()
-{
-int n,p,bi,i,r;
+int decibin() {
+    int n,p,bi,i,r;
 
-bi=0;
-i=1;
-cout<<"Enter the Term:";
-cin>>n;
-p=n;
-while(n!=0)
-{
-r=n%2;
-n=n/2;
-bi=bi+r*i;
-i=i*10;
-}
-cout<<endl<<"Binary equivalent of"<<p<<"="<<bi;
-return 0;
+    bi=0;
+    i=1;
+    cout<<"Enter the Term:";
+    cin>>n;
+    p=n;
+
+    while(n!=0) {
+        r=n%2;
+        n=n/2;
+        bi=bi+r*i;
+        i=i*10;
+    }
+
+    cout<<endl<<"Binary equivalent of"<<p<<"="<<bi;
+    return 0;
 }
 
 

@@ -5,29 +5,30 @@ using namespace std;
 
 class multi {
 	int* p;
-     int m,i;
+	int m,i;
 
-public:multi(int);
+	public:
+		multi(int);
 };	
-multi::multi(int x)
-	{
-		p = new int;
-		*p = x;
-                i=1;
-cout<<endl<<"Multiplication Table of:"<<*p;
-while(i<=10)
-{
-m=i*(*p);
-cout<<endl<<*p<<"x"<<i<<"="<<m;
-i++;
-}
-}
-main()
-{   int p1;
-        cout<<endl<<"Enter the Term:";
-        cin>>p1;
-	multi obj2 = multi(p1);
+
+multi::multi(int x) {
+	p = new int;
+	*p = x;
+	i=1;
+	cout<<endl<<"Multiplication Table of:"<<*p;
 	
+	while(i<=10) {
+		m=i*(*p);
+		cout<<endl<<*p<<"x"<<i<<"="<<m;
+		i++;
+	}
+}
+
+main() {
+	int p1;
+	cout<<endl<<"Enter the Term:";
+	cin>>p1;
+	multi obj2 = multi(p1);
 }
 
 
