@@ -51,7 +51,7 @@ diameter::diameter() {
     cout<<endl<<"Diameter of the circle="<<d;
 }
 
-main() {
+int main() {
     circleperi ci;
 }
 

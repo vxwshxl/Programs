@@ -26,7 +26,7 @@ Test::~Test() {
     cout <<endl<<"Factorai of "<<p<<"="<<f;
 }
 
-main() {
+int main() {
     Test t;
 }
 

@@ -3,7 +3,7 @@
 #include<iostream>
 using namespace std;
 
-main() {
+int main() {
     try {
         int n;
         int d;

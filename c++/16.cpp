@@ -24,7 +24,7 @@ multi::multi(int x) {
 	}
 }
 
-main() {
+int main() {
 	int p1;
 	cout<<endl<<"Enter the Term:";
 	cin>>p1;

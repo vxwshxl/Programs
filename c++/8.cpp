@@ -34,7 +34,7 @@ void swap1::display() {
     cout<<endl<<"Values After Swap: X="<<a<<"and Y="<<b;
 }
 
-main() {
+int main() {
     int a1,b1;
     swap1 s(a1,b1);
     s.display();

@@ -28,7 +28,7 @@ void geeks::display() {
 }
      
 
-main() {
+int main() {
 	int p1;
 	cout<<endl<<"Enter the Term:";
 	cin>>p1;

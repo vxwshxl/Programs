@@ -36,7 +36,7 @@ swap1::swap1(int x,int y) {
   cout<<endl<<"After SwapA="<<x<<"and B="<<y;
 }
 
-main() {
+int main() {
   int a1,b1;
   cout<<endl<<"Constructor Overloading:";
   cout<<endl<<"SWAP(with 3rd variable:)";

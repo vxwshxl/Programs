@@ -39,7 +39,7 @@ void sorting::sort() {
     }
 }
 
-main() {
+int main() {
     sorting s1=sorting();
     s1.sort();
 }

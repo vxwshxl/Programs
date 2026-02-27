@@ -22,7 +22,7 @@ void multiplication::gettable() {
     }
 }
 
-main() {
+int main() {
     multiplication ml;
     ml.gettable();
 }

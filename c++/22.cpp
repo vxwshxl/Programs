@@ -4,7 +4,7 @@
 #include<fstream>
 using namespace std;
 
-main() {
+int main() {
 	int l,b,a;
 	cout<<"Enter the Length:";
 	cin>>l;

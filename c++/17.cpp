@@ -20,12 +20,11 @@ int decibin() {
         i=i*10;
     }
 
-    cout<<endl<<"Binary equivalent of"<<p<<"="<<bi;
+    cout<<endl<<"Binary equivalent of "<<p<<"="<<bi;
     return 0;
 }
 
 
 // Output:
 Enter the Term:65
-
-Binary equivalent of65=1000001
+Binary equivalent of 65=1000001

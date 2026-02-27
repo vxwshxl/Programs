@@ -3,7 +3,7 @@
 #include<iostream>
 using namespace std;
 
-main() {
+int main() {
     int n, temp = 1;
     cout << "Enter the number[to print its factors:] " << endl;
     cin >> n;

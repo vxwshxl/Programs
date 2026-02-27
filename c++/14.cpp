@@ -44,7 +44,7 @@ array::array(int i) {
   cout<<endl<<"Smallest Elements"<<m;;
 }
 
-main() {
+int main() {
   int a1;
   cout<<endl<<"Constructor Overloading:";
   cout<<endl<<"Largest Element from an array";
