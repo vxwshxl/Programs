@@ -23,7 +23,7 @@ Test::Test() {
 
 Test::~Test() {
     cout<<endl<<"using Destructor:";
-    cout <<endl<<"Factorai of"<<p<<"="<<f;
+    cout <<endl<<"Factorai of "<<p<<"="<<f;
 }
 
 main() {
@@ -35,4 +35,4 @@ main() {
 Enter the Term:6
 
 using Destructor:
-Factorai of6=720
+Factorai of 6=720
