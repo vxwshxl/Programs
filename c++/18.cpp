@@ -7,7 +7,7 @@ class Test {
     int f,n,p;
     public:
         Test();
-    ~Test();
+        ~Test();
 };
 
 Test::Test() {
