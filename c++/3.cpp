@@ -23,3 +23,8 @@ int main() {
     
     return 0;
 }
+
+
+// Output:
+Enter Positive Integer within the range: 123
+Sum of digits of 123 is 6
