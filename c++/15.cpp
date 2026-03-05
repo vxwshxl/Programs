@@ -1,12 +1,11 @@
 // 15. Write a dynamic constructor in c++ to input a term and print the factorial of that term.
 
 #include <iostream>
-
 using namespace std;
+
 class geeks {
 	int* p;
 	int f,r;
-
 	public:
 		geeks(int);
 		void display();
