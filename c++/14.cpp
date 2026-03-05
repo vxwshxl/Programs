@@ -5,52 +5,57 @@
 using namespace std;
 
 class array {
-  int a[10],n,m;
-  public:
-    array();
-    array(int);
+    int a[10],n,m;
+    public:
+        array();
+        array(int);
 };
 
 array::array() {
-  int i;
-  cout<<endl<<"Enter the Dimension:";
-  cin>>n;
-  cout<<endl<<"Enter the Elements:";
+    int i;
+    cout<<endl<<"Enter the Dimension:";
+    cin>>n;
+    cout<<endl<<"Enter the Elements:";
 
-  for(i=0;i<n;i++)
-    cin>>a[i];
-  m=0;
+    for(i=0;i<n;i++)
+        cin>>a[i];
+        m=0;
 
-  for(i=0;i<n;i++) {
-    if(a[i]>=m) {
-      m=a[i];
+        for(i=0;i<n;i++) {
+            if(a[i]>=m) {
+            m=a[i];
+            }
+        }
+        cout<<endl<<"Largest Elements"<<m;
     }
-  }
-  cout<<endl<<"Largest Elements"<<m;
-}
 
-array::array(int i) {
-  cout<<endl<<"Enter the Dimension:";
-  cin>>n;
-  cout<<endl<<"Enter the Elements:";
-  for(i=0;i<n;i++)
-    cin>>a[i];
-  m=a[0];
-  for(i=0;i<n;i++) {
-    if(a[i]<=m) {
-      m=a[i];
+    array::array(int i) {
+        cout<<endl<<"Enter the Dimension:";
+        cin>>n;
+        cout<<endl<<"Enter the Elements:";
+
+        for(i=0;i<n;i++)
+            cin>>a[i];
+
+        m=a[0];
+
+        for(i=0;i<n;i++) {
+            if(a[i]<=m) {   
+                m=a[i];
+            }
+        }
+        cout<<endl<<"Smallest Elements"<<m;
     }
-  }
-  cout<<endl<<"Smallest Elements"<<m;;
-}
 
 int main() {
-  int a1;
-  cout<<endl<<"Constructor Overloading:";
-  cout<<endl<<"Largest Element from an array";
-  array sw;
-  cout<<endl<<"Smallest Element from an array";
-  array se(a1);
+    int a1;
+    cout<<endl<<"Constructor Overloading:";
+    cout<<endl<<"Largest Element from an array";
+
+    array sw;
+
+    cout<<endl<<"Smallest Element from an array";
+    array se(a1);
 }
 
 
