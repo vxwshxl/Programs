@@ -11,7 +11,7 @@ int main() {
     cout<<"Enter the Breadth:";
 	cin>>b;
 	a=2*(l+b);
-    ofstream fout("student3.doc");
+    ofstream fout("student.doc");
     fout<<endl<<"perimeter of Rectangle"<<a; //write data to the file student
     fout.close();
     cout<<endl<<"perimeter of Rectangle"<<a;
@@ -23,5 +23,5 @@ Enter the Length:2000
 Enter the Breadth:3
 
 perimeter of Rectangle4006
-$ cat student3.doc
+$ cat student.doc
 perimeter of Rectangle4006
