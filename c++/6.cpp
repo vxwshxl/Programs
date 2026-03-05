@@ -25,4 +25,4 @@ int main(){
 
 // Output:
 Enter the value of N: 5
-Sum of the Series is: 2.28333
+Sum of the Series is: 1.29126
