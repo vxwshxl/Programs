@@ -6,8 +6,8 @@ using namespace std;
 int binaryToDecimal(int n){
     int num = n;
 	int dv = 0;
-        int base = 1;
-        int ld;
+	int base = 1;
+	int ld;
 	int temp = num;
 	while(temp!=0) {
 		ld = temp % 10;//l=0,0,0,1
