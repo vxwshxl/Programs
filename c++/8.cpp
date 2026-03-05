@@ -20,14 +20,14 @@ swap1::swap1(swap1 &t) {
 swap1::swap1(int x,int y) {
     cout<<endl<<"Enter the Value of X:";
     cin>>x;
-        cout<<endl<<"Enter the Value of Y:";
-        cin>>y;
-        a=x;
-        b=y;
-       cout<<endl<<"Values Before Swap: X="<<a<<"and Y="<<b;
-       a=a+b;
-       b=a-b;
-       a=a-b;
+    cout<<endl<<"Enter the Value of Y:";
+    cin>>y;
+    a=x;
+    b=y;
+    cout<<endl<<"Values Before Swap: X="<<a<<"and Y="<<b;
+    a=a+b;
+    b=a-b;
+    a=a-b;
 }
 
 void swap1::display() {
