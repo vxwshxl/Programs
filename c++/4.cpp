@@ -26,3 +26,8 @@ int main() {
     sumfraction sf;
     sf.generate();
 }
+
+
+// Output:
+Enter the limit: 5
+Sum of the Series: 2.28333
