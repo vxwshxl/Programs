@@ -20,3 +20,9 @@ int main(){
     
     return 0;
 }
+
+// Output:
+Enter dividend: 5
+Enter divisor: 2
+Quotient: 2
+Remainder: 1
