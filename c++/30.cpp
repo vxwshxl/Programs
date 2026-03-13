@@ -1,4 +1,4 @@
-30. write the constructors in c++ to input the term and generate the fibonacci series of that term using the concept of multilevel inheritance
+// 30. Write the constructors in c++ to input the term and generate the fibonacci series of that term using the concept of multilevel inheritance
 #include<iostream>
 using namespace std;
 class fibo1

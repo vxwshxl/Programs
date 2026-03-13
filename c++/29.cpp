@@ -9,30 +9,30 @@ class linears {
     public:
         linears();
 };
+
 linears::linears() {
     cout<<endl<<"Enter the number of elements:";
     cin>>n;
     cout<<endl<<"Enter the Elements:";
     for(i=0;i<n;i++)
-cin>>a[i];
-cout<<endl<<"Enter the Item to search:";
-cin>>item;
-ofstream fit("student3.doc");
-for(i=0;i<n;i++)
-{
-if(a[i]==item)
-{
-fit<<endl<<item<<"is found at"<<i<<"th position:";
-cout<<endl<<item<<"is found at"<<i<<"th position:";
-fit.close();
+        cin>>a[i];
+    cout<<endl<<"Enter the Item to search:";
+    cin>>item;
+    ofstream fit("student3.doc");
+    for(i=0;i<n;i++) {
+        if(a[i]==item) {
+            fit<<endl<<item<<"is found at"<<i<<"th position:";
+            cout<<endl<<item<<"is found at"<<i<<"th position:";
+            fit.close();
+        }
+    }
 }
+
+int main() {
+    linears l1;
 }
-}
-main()
-{
-linears l1;
-}
-output:
+
+// Output:
 Enter the number of elements:4
 
 Enter the Elements:1
