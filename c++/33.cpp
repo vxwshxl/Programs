@@ -17,9 +17,9 @@ int main() {
         i++;
     }
     
-    if(f)
+    if(f) {
         cout<<n<<"is not a prime number:";
-    else {
+    } else {
         cout<<n<<"is a prime number:";
     }
 }
@@ -28,7 +28,3 @@ int main() {
 // Output:
 Enter a term:6
 6is not a prime number:
-fingers@fingers-B460M-GAMING-HD:$ ./a.out
-
-Enter a term:7
-7is a prime number:
