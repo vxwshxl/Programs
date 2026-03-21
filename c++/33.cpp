@@ -20,11 +20,11 @@ int main() {
     if(f) {
         cout<<n<<"is not a prime number:";
     } else {
-        cout<<n<<"is a prime number:";
+        cout<<n<<"is a prime number";
     }
 }
 
 
 // Output:
 Enter a term:6
-6is not a prime number:
+6is not a prime number
