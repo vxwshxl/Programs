@@ -1,5 +1,7 @@
 // 32. Write a program in c++ to input a decimal number and print the binary equivalent of that number with operator overloading.
 
+
+
 #include<iostream>    
 using namespace std;    
 
