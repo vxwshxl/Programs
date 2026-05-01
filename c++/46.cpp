@@ -3,14 +3,14 @@
 #include <iostream>
 using namespace std;
 
-class array {
+class ArrayBase {
     public:
         virtual void display() {
             cout << "Virtual Function:" << endl;
         }
 };
 
-class reverse:public array {
+class reverse:public ArrayBase {
     int a[10], i, n;
     public:
         void display() {
@@ -33,7 +33,7 @@ class reverse:public array {
 };
 
 int main() {
-    array* a;
+    ArrayBase* a;
     reverse b;     //object of derived class    
     a = &b;
     //b.display();   
