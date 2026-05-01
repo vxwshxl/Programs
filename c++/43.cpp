@@ -1,6 +1,6 @@
 // 43. Write the template function to print the sum of 1st nth term and find the duplicate elements from an array list using template function overloading.
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 template <class T>
 
