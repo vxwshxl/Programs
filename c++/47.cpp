@@ -31,7 +31,8 @@ class shape3 : public virtual shape1 {
 };
 class shape4 : public shape2, public shape3 {
 };
- main()
+
+int main()
 {
 	shape4 s4;  
 	cout << "Total term=" << s4.n << endl; 	
