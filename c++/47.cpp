@@ -33,8 +33,8 @@ class shape4 : public shape2, public shape3 {
 };
 
 int main() {
-	shape4 s4;  
-	cout << "Total term=" << s4.n << endl; 	
+    shape4 s4;  
+    cout << "Total term=" << s4.n << endl; 	
 }
 
 
