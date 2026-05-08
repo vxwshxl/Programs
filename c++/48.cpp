@@ -1,6 +1,6 @@
 // 48. Write a constructor in c++ to input the length,height and breadth of 3 wooden piece and calculate and print the total size in CFT using destructor
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class woodframe {

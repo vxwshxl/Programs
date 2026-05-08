@@ -1,6 +1,6 @@
 // 51. Write a constructor C++ to Convert Hours in Terms of Minutes and Seconds.
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class clock1 {
