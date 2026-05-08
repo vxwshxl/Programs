@@ -32,6 +32,7 @@ int main() {
     return 0;
 }    
 
+
 // Output:
 Enter a year: 1900
 1900 is not a leap year.
