@@ -10,6 +10,7 @@ n=5
 
 #include <iostream>
 using namespace std;
+
 class shape1 {
     public:
         int i,j,n;

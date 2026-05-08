@@ -1,7 +1,9 @@
-49. write a file program in c++ to input the year and check whether it is a leap year or not.
+// 49. Write a file program in c++ to input the year and check whether it is a leap year or not.
+
 #include <iostream>
 #include <fstream>
 using namespace std;
+
 int main() {
     int year;
     ofstream file;
@@ -27,11 +29,10 @@ int main() {
 
     // Close the file
     file.close();
-
     return 0;
 }    
 
-output:
+// Output:
 Enter a year: 1900
 1900 is not a leap year.
 cat leap.txt
