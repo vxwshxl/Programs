@@ -1,27 +1,30 @@
-53.write a program in c++ to input a term and print the pascal triangle of that term.
-#include<iostream>
+// 53. Write a program in c++ to input a term and print the pascal triangle of that term.
+
+#include <iostream>
 using namespace std;
-int main()
-{ int rows;
-  cout << "Enter the number of rows : ";
-  cin >> rows;
-  cout << endl;
-  for (int i = 0; i < rows; i++)
-{
-int val = 1;
-for (int j = 1; j < (rows - i); j++)
-{cout << "   ";
+
+int main() {
+   int rows;
+   cout << "Enter the number of rows : ";
+   cin >> rows;
+   cout << endl;
+   for (int i = 0; i < rows; i++){
+        int val = 1;
+        for (int j = 1; j < (rows - i); j++){
+            cout << "   ";
+        }
+        for (int k = 0; k <= i; k++){
+            cout << "      " << val;
+            val = val * (i - k) / (k + 1);
+        }
+        cout << endl << endl;
+    }
+    cout << endl;
+    return 0;
 }
-for (int k = 0; k <= i; k++)
-{
-cout << "      " << val;
-val = val * (i - k) / (k + 1);
-}cout << endl << endl;
- }
-cout << endl;
-return 0;
-}
-output:
+
+
+// Output:
 Enter the number of rows : 9
 
                               1
