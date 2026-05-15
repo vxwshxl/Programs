@@ -28,10 +28,8 @@ class matrix1 {
 
             // For sums of Rows
             for (i = 0; i < n; i++) {
-                
                 int rowSum = 0, colSum = 0;
-                for (j = 0; j < n; j++)
-                {
+                for (j = 0; j < n; j++) {
                     rowSum += mat[i][j];
                     colSum += mat[j][i];
                 }
