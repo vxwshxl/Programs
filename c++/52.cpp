@@ -28,7 +28,6 @@ int main() {
     cin>>n;
     // Check every number from 1 to n
     for (int i = 1; i <= n; i++) {
-
         // Check if current number is prime
         if (p.isPrime(i))
             cout << i << " ";
