@@ -1,0 +1,1 @@
+Q10. Create a trigger that checks the salary of an employee before update and ensures that the salary is less than 1000. If the user tries to update the salary and gives a value more than 1000, then it will raise an error.

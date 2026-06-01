@@ -1,0 +1,14 @@
+Q3. Create an Employee table. Enter employee name, designation and basic pay of 5 employees.
+
+i) Find out gross salary and net salary where:
+   DA = 60% of Basic Pay
+   TA = 20% of Basic Pay
+   HRA = 10% of Basic Pay
+   TAX = 15% of Basic Pay
+   GROSS = Basic + DA + TA + HRA
+   NET = GROSS - TAX
+
+ii) Find the total number of employees.
+iii) Find the total number of employees having gross salary between 5000 and 15000.
+iv) Find the maximum gross salary.
+v) Display the details of the employee who gets the maximum gross salary.

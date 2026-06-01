@@ -1,0 +1,9 @@
+Q9.
+
+i) Create a trigger to log inserts. Create a table student_log. Write a trigger that logs every insert operation on students.
+
+ii) Create a trigger that prevents inserting a student with age < 18.
+
+iii) Create a trigger that automatically sets the created_at column when a new record is inserted.
+
+iv) Write a trigger that stops insertion/update if marks < 0.

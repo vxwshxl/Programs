@@ -1,0 +1,13 @@
+Q6. Designing a small database for a Movie Review System.
+
+1. Create two tables:
+   a) Movies: To store the details of movies.
+      Columns: movie_id (primary key), title, genre, release_year
+   b) Reviews: To store reviews of movies.
+      Columns: review_id (primary key), movie_id (foreign key), reviewer_name, rating (1-5), review_date
+
+2. Insert data: 5 movies and 10 reviews
+
+3. Query 1: Write a query to list all movie titles along with their genres and average rating.
+
+4. Query 2: Write a query to list the 3 most recently reviewed movies. Use the LIMIT clause.

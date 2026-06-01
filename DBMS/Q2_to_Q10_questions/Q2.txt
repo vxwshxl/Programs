@@ -1,0 +1,7 @@
+Q2. Install MySQL. Create an Employee table with the following fields:
+
+Employee(emp_id, e_name, designation, salary, dept)
+
+i) Display the details of employees working in the HR department.
+ii) Display the names of employees who are getting a salary within the range 20k to 50k.
+iii) Display the IDs of employees who is a manager and getting salary more than 60k.

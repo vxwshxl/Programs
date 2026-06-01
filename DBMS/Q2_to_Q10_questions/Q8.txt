@@ -1,0 +1,7 @@
+Q8.
+
+i) Write a procedure to add two numbers and return the sum.
+
+ii) Write a procedure to return the maximum salary from a given employee table. Consider the employee table.
+
+iii) Create a procedure to count the total number of a particular subject. Provide the subject name as an input parameter and get the total count through an OUT parameter.

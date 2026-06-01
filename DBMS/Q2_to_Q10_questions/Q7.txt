@@ -1,0 +1,11 @@
+Q7.
+
+i) Write an SQL query to fetch the list of books borrowed by members, along with their corresponding category names. Use the INNER JOIN operation on the Books, Categories and Borrowed_Books tables.
+
+ii) Write an SQL query to find all the books that are not currently borrowed by any member. Use the LEFT JOIN operation on the Books and Borrowed_Books tables.
+
+iii) Write an SQL query to combine the following two datasets using the UNION operator:
+   - The names of all authors of books in the Science category.
+   - The names of all authors of books borrowed by the members with the name John.
+
+iv) Assume you are adding a new book to the Books table. Write one SQL statement to insert the record, ensuring that the category_id of the book matches an existing category_id in the Categories table. Explain how foreign key constraints ensure data integrity in this scenario.
