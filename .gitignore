@@ -1,0 +1,5 @@
+.antigravitycli/
+.DS_Store
+*.exe
+*.o
+*.out
