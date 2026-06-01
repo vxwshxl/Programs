@@ -1,6 +1,5 @@
 # C++ Viva Questions (100 Questions with Answers)
 
-
 Questions are grouped by topic and ordered roughly from basics to advanced,
 matching the concepts used in the programs in this folder.
 
