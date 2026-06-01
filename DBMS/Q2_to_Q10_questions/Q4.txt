@@ -1,0 +1,12 @@
+Q4. Consider the following relational schemas:
+
+Books(b_id, b_name, author, purchase_date, cost)
+Members(m_id, m_name, address, phone, birthdate)
+Issue_Return(b_id, m_id, i_date, r_date)
+
+i) Find the authors of the books that have not been issued.
+ii) Display the member IDs and number of books issued to that member.
+   (Assume that if a book in the Issue_Return relation does not have a return date, then it is issued.)
+iii) Find the book that has been issued the minimum number of times.
+iv) Display the names and author of the books that have been issued at any time to members whose name begins with 'R'.
+v) Display the name and cost of those books that have been issued to any member whose date of birth is less than 01-01-1989, but not been issued to any member having the birth date equal to or greater than 01-01-1989.

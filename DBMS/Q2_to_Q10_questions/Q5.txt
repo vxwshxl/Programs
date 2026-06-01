@@ -1,0 +1,11 @@
+Q5. Consider the following relational schemas:
+
+Customer(c_id, c_name, address)
+Item(i_code, i_name, price)
+Purchase(p_id, c_id, i_code, qty, date)
+
+Use foreign key for c_id and i_code in the Purchase table.
+
+a) Find the name of the customer who has done the maximum purchase.
+b) Display the name of the item that has been purchased maximum number of times in the month of February.
+c) Display the name of the customer who did not purchase any item.
