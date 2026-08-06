@@ -183,42 +183,92 @@ python3 1.py          # run any experiment directly
 Each file is standalone. Open it, read the `# N.` header at the top, run it — no imports
 between files, no setup script, no order you have to follow.
 
+> ⚠️ Use **`python3`**, not `python`. On this machine `python` is Python 3.10 with nothing
+> installed — see [Requirements](#-requirements).
+
+<details>
+<summary>💻 What experiment 1 prints</summary>
+
+<br>
+
+```console
+$ python3 1.py
+CSV Data:
+       Name  Age
+0    Alice   25
+1      Bob   30
+2  Charlie   35
+```
+
+</details>
+
 ---
 
 ## 📦 Requirements
 
-<details open>
-<summary><b>Install everything in one line</b></summary>
+Everything below is **already installed** — this section is here for a fresh machine.
+
+| Package | Version | Powers |
+|---------|:-------:|--------|
+| `pandas` | ✅ 3.0.1 | 1, 2, 8, 39, 40 |
+| `numpy` | ✅ 2.3.4 | almost everything |
+| `openpyxl` | ✅ 3.1.5 | Excel I/O in 1 |
+| `scipy` | ✅ 1.18.0 | 5, 6, 7, 24 |
+| `matplotlib` | ✅ 3.11.1 | 4, 9, 10, 24, 38, 39 |
+| `seaborn` | ✅ 0.13.2 | 9, 10, 38, 39 |
+| `scikit-learn` | ✅ 1.9.0 | 11–30, 32, 33, 40 |
+| `plotly` | ✅ 6.9.0 | 37 |
+| `networkx` | ✅ 3.6.1 | 34, 35, 36 |
+| `nltk` | ✅ 3.10.2 | 31 |
+
+<details>
+<summary><b>🔁 Reinstalling from scratch</b></summary>
 
 <br>
 
 ```bash
-pip install pandas numpy openpyxl scipy matplotlib seaborn scikit-learn plotly networkx nltk
+python3 -m pip install pandas numpy openpyxl scipy matplotlib \
+                       seaborn scikit-learn plotly networkx nltk
 ```
 
 NLTK also needs its corpora downloaded once, before experiment 31:
 
 ```bash
-python3 -c "import nltk; nltk.download('punkt'); nltk.download('stopwords')"
+python3 -c "import nltk; nltk.download('punkt'); nltk.download('punkt_tab'); nltk.download('stopwords'); nltk.download('wordnet')"
 ```
 
 </details>
 
-| Package | Powers | Status on this machine |
-|---------|--------|:----------------------:|
-| `pandas` | 1, 2, 8, 39, 40 | ✅ 3.0.1 |
-| `numpy` | almost everything | ✅ 2.3.4 |
-| `openpyxl` | Excel I/O in 1 | ✅ 3.1.5 |
-| `scipy` | 5, 6, 7, 24 | ⬜ not installed |
-| `matplotlib` | 4, 9, 10, 24, 38, 39 | ⬜ not installed |
-| `seaborn` | 9, 10, 38, 39 | ⬜ not installed |
-| `scikit-learn` | 11–30, 32, 33, 40 | ⬜ not installed |
-| `plotly` | 37 | ⬜ not installed |
-| `networkx` | 34, 35, 36 | ⬜ not installed |
-| `nltk` | 31 | ⬜ not installed |
+### ⚠️ Use `python3 -m pip`, never bare `pip`
 
-> 💡 Only `pandas`, `numpy` and `openpyxl` are present right now — enough for experiment 1.
-> Install the rest before you get to module 2.
+This machine has **two Pythons**, and the shortcuts point at different ones:
+
+| Command | Resolves to | |
+|---------|-------------|---|
+| `python3` | Framework **3.14** | ✅ where every package lives — run scripts with this |
+| `pip` → `python` → `python3.10` | Homebrew **3.10** | ❌ empty, installs land where nothing runs |
+
+Install with bare `pip` and the packages vanish into 3.10 while `python3 1.py` keeps
+reporting `ModuleNotFoundError`. Prefixing with `python3 -m` guarantees the installer and the
+interpreter are the same one:
+
+```bash
+python3 -m pip install <package>      # ✅ always
+pip install <package>                 # ❌ wrong Python
+```
+
+<details>
+<summary>🔐 If NLTK downloads fail with <code>CERTIFICATE_VERIFY_FAILED</code></summary>
+
+<br>
+
+The python.org framework build ships without root certificates. Run the bundled fixer once:
+
+```bash
+"/Applications/Python 3.14/Install Certificates.command"
+```
+
+</details>
 
 ---
 
