@@ -10,7 +10,7 @@
 ![Dept](https://img.shields.io/badge/Dept.%20of%20CSE-RSET-maroon?style=for-the-badge)
 
 ![Experiments](https://img.shields.io/badge/Experiments-40-blueviolet?style=flat-square)
-![Status](https://img.shields.io/badge/Progress-1%20%2F%2040-orange?style=flat-square)
+![Status](https://img.shields.io/badge/Progress-13%20%2F%2040-orange?style=flat-square)
 ![Datasets](https://img.shields.io/badge/External%20datasets-not%20required-brightgreen?style=flat-square)
 
 </div>
@@ -46,9 +46,9 @@ Getting bytes off disk and into a clean `DataFrame`.
 
 | # | File | Experiment |
 |:-:|:-----|:-----------|
-| 01 | [1.py](1.py) | 📄 Import & export — CSV, Excel, JSON |
-| 02 | [2.py](2.py) | 🧹 Preprocessing — missing values, duplicates, inconsistencies |
-| 08 | [8.py](8.py) | 🔧 Manipulate & transform with Pandas |
+| 01 | [1.py](1/1.py) | 📄 Import & export — CSV, Excel, JSON |
+| 02 | [2.py](2/2.py) | 🧹 Preprocessing — missing values, duplicates, inconsistencies |
+| 08 | [8.py](8/8.py) | 🔧 Manipulate & transform with Pandas |
 
 </td></tr>
 <tr><td>
@@ -58,11 +58,11 @@ The numbers behind the numbers.
 
 | # | File | Experiment |
 |:-:|:-----|:-----------|
-| 03 | [3.py](3.py) | 🧮 Mean, median, mode, variance, std. deviation, covariance |
-| 04 | [4.py](4.py) | 🔗 Covariance & correlation matrices |
-| 05 | [5.py](5.py) | 🔔 Univariate & multivariate normal distributions |
-| 06 | [6.py](6.py) | ⚖️ Hypothesis testing with SciPy |
-| 07 | [7.py](7.py) | 📏 Confidence intervals for population parameters |
+| 03 | [3.py](3/3.py) | 🧮 Mean, median, mode, variance, std. deviation, covariance |
+| 04 | [4.py](4/4.py) | 🔗 Covariance & correlation matrices |
+| 05 | [5.py](5/5.py) | 🔔 Univariate & multivariate normal distributions |
+| 06 | [6.py](6/6.py) | ⚖️ Hypothesis testing with SciPy |
+| 07 | [7.py](7/7.py) | 📏 Confidence intervals for population parameters |
 
 </td></tr>
 <tr><td>
@@ -72,11 +72,11 @@ Making the data admit what it's hiding.
 
 | # | File | Experiment |
 |:-:|:-----|:-----------|
-| 09 | [9.py](9.py) | 🎨 Matplotlib & Seaborn basics |
-| 10 | [10.py](10.py) | 📊 Bar, histogram, pie, box, scatter, heatmap |
-| 37 | [37.py](37.py) | 🖱️ Interactive charts with Plotly |
-| 38 | [38.py](38.py) | 🕸️ Pair plots & multidimensional views |
-| 39 | [39.py](39.py) | 🔍 Full EDA on a real-world dataset |
+| 09 | [9.py](9/9.py) | 🎨 Matplotlib & Seaborn basics |
+| 10 | [10.py](10/10.py) | 📊 Bar, histogram, pie, box, scatter, heatmap |
+| 37 | [37.py](37/37.py) | 🖱️ Interactive charts with Plotly |
+| 38 | [38.py](38/38.py) | 🕸️ Pair plots & multidimensional views |
+| 39 | [39.py](39/39.py) | 🔍 Full EDA on a real-world dataset |
 
 </td></tr>
 <tr><td>
@@ -86,9 +86,9 @@ Fitting a line, then fitting it responsibly.
 
 | # | File | Experiment |
 |:-:|:-----|:-----------|
-| 11 | [11.py](11.py) | ➖ Simple Linear Regression (Scikit-learn) |
-| 12 | [12.py](12.py) | ➕ Multiple Linear Regression + evaluation |
-| 13 | [13.py](13.py) | 🎚️ Ridge & Lasso (L2 / L1 regularization) |
+| 11 | [11.py](11/11.py) | ➖ Simple Linear Regression (Scikit-learn) |
+| 12 | [12.py](12/12.py) | ➕ Multiple Linear Regression + evaluation |
+| 13 | [13.py](13/13.py) | 🎚️ Ridge & Lasso (L2 / L1 regularization) |
 
 </td></tr>
 <tr><td>
@@ -98,15 +98,15 @@ Six algorithms, one shootout.
 
 | # | File | Experiment |
 |:-:|:-----|:-----------|
-| 14 | [14.py](14.py) | ✂️ Train-test split & cross-validation |
-| 15 | [15.py](15.py) | 🧾 Confusion matrix, accuracy, precision, recall, F1, ROC-AUC |
-| 16 | [16.py](16.py) | 👟 k-Nearest Neighbors |
-| 17 | [17.py](17.py) | 🌳 Decision Tree |
-| 18 | [18.py](18.py) | 🛡️ Support Vector Machine |
-| 19 | [19.py](19.py) | 🌲 Random Forest |
-| 20 | [20.py](20.py) | 🎲 Naïve Bayes |
-| 21 | [21.py](21.py) | 🔀 Logistic Regression (binary) |
-| 22 | [22.py](22.py) | 🏁 Compare all classifiers on one dataset |
+| 14 | [14.py](14/14.py) | ✂️ Train-test split & cross-validation |
+| 15 | [15.py](15/15.py) | 🧾 Confusion matrix, accuracy, precision, recall, F1, ROC-AUC |
+| 16 | [16.py](16/16.py) | 👟 k-Nearest Neighbors |
+| 17 | [17.py](17/17.py) | 🌳 Decision Tree |
+| 18 | [18.py](18/18.py) | 🛡️ Support Vector Machine |
+| 19 | [19.py](19/19.py) | 🌲 Random Forest |
+| 20 | [20.py](20/20.py) | 🎲 Naïve Bayes |
+| 21 | [21.py](21/21.py) | 🔀 Logistic Regression (binary) |
+| 22 | [22.py](22/22.py) | 🏁 Compare all classifiers on one dataset |
 
 </td></tr>
 <tr><td>
@@ -116,9 +116,9 @@ No labels. Find the structure anyway.
 
 | # | File | Experiment |
 |:-:|:-----|:-----------|
-| 23 | [23.py](23.py) | ⭕ K-Means |
-| 24 | [24.py](24.py) | 🌿 Hierarchical clustering + dendrogram |
-| 25 | [25.py](25.py) | 📋 Compare clusterings (silhouette, Davies-Bouldin, …) |
+| 23 | [23.py](23/23.py) | ⭕ K-Means |
+| 24 | [24.py](24/24.py) | 🌿 Hierarchical clustering + dendrogram |
+| 25 | [25.py](25/25.py) | 📋 Compare clusterings (silhouette, Davies-Bouldin, …) |
 
 </td></tr>
 <tr><td>
@@ -128,11 +128,11 @@ Fewer dimensions, better suggestions.
 
 | # | File | Experiment |
 |:-:|:-----|:-----------|
-| 26 | [26.py](26.py) | 👥 Collaborative filtering |
-| 27 | [27.py](27.py) | 🏷️ Content-based recommendation |
-| 28 | [28.py](28.py) | 🔢 Singular Value Decomposition (SVD) |
-| 29 | [29.py](29.py) | 🎯 Principal Component Analysis (PCA) |
-| 30 | [30.py](30.py) | ⚔️ PCA vs. SVD |
+| 26 | [26.py](26/26.py) | 👥 Collaborative filtering |
+| 27 | [27.py](27/27.py) | 🏷️ Content-based recommendation |
+| 28 | [28.py](28/28.py) | 🔢 Singular Value Decomposition (SVD) |
+| 29 | [29.py](29/29.py) | 🎯 Principal Component Analysis (PCA) |
+| 30 | [30.py](30/30.py) | ⚔️ PCA vs. SVD |
 
 </td></tr>
 <tr><td>
@@ -142,9 +142,9 @@ Words in, vectors out.
 
 | # | File | Experiment |
 |:-:|:-----|:-----------|
-| 31 | [31.py](31.py) | ✂️ Tokenization, stop-word removal, stemming |
-| 32 | [32.py](32.py) | 🔎 TF-IDF vectorization for information retrieval |
-| 33 | [33.py](33.py) | 📐 Cosine similarity between documents |
+| 31 | [31.py](31/31.py) | ✂️ Tokenization, stop-word removal, stemming |
+| 32 | [32.py](32/32.py) | 🔎 TF-IDF vectorization for information retrieval |
+| 33 | [33.py](33/33.py) | 📐 Cosine similarity between documents |
 
 </td></tr>
 <tr><td>
@@ -154,9 +154,9 @@ Nodes, edges, and the cliques between them.
 
 | # | File | Experiment |
 |:-:|:-----|:-----------|
-| 34 | [34.py](34.py) | 🔵 Build & analyze graphs with NetworkX |
-| 35 | [35.py](35.py) | 🏘️ Community detection |
-| 36 | [36.py](36.py) | ✂️ Graph partitioning & neighborhood properties |
+| 34 | [34.py](34/34.py) | 🔵 Build & analyze graphs with NetworkX |
+| 35 | [35.py](35/35.py) | 🏘️ Community detection |
+| 36 | [36.py](36/36.py) | ✂️ Graph partitioning & neighborhood properties |
 
 </td></tr>
 <tr><td>
@@ -165,7 +165,7 @@ Nodes, edges, and the cliques between them.
 
 | # | File | Experiment |
 |:-:|:-----|:-----------|
-| 40 | [40.py](40.py) | 🚀 End-to-end application — preprocess → visualize → model → evaluate → predict |
+| 40 | [40.py](40/40.py) | 🚀 End-to-end application — preprocess → visualize → model → evaluate → predict |
 
 </td></tr>
 </table>
@@ -174,10 +174,21 @@ Nodes, edges, and the cliques between them.
 
 ## 🚀 Quick Start
 
+Every experiment lives in **its own numbered folder** — experiment 11 is `11/11.py`, not `11.py`.
+
 ```bash
 cd ~/Programs/DS
 
-python3 1.py          # run any experiment directly
+python3 11/11.py          # run experiment 11
+python3 1/1.py            # run experiment 1
+```
+
+Or step into the folder first. Do it this way for **experiment 1**, so the files it writes
+land in `1/` instead of the repo root:
+
+```bash
+cd ~/Programs/DS/1
+python3 1.py
 ```
 
 Each file is standalone. Open it, read the `# N.` header at the top, run it — no imports
@@ -185,6 +196,39 @@ between files, no setup script, no order you have to follow.
 
 > ⚠️ Use **`python3`**, not `python`. On this machine `python` is Python 3.10 with nothing
 > installed — see [Requirements](#-requirements).
+
+### 🖼️ Experiments that open plot windows
+
+Anything using Matplotlib or Seaborn (**4, 5, 9, 10, 11, 12, 13, 24, 38, 39**) pauses at each
+`plt.show()` and waits. **Close the window to let the script continue** — a program with three
+plots stops three times. It has not frozen.
+
+Running over SSH, or just want the printed numbers without the windows:
+
+```bash
+MPLBACKEND=Agg python3 13/13.py     # skip the plots, keep the output
+```
+
+<details>
+<summary>▶️ Run every finished experiment in one go</summary>
+
+<br>
+
+```bash
+cd ~/Programs/DS
+
+for d in $(ls -d */ | sort -n); do
+  n=${d%/}
+  [ -f "$n/$n.py" ] || continue
+  echo "───── Experiment $n ─────"
+  (cd "$n" && MPLBACKEND=Agg python3 "$n.py")
+done
+```
+
+`MPLBACKEND=Agg` keeps it from stopping at every plot, and the `cd` keeps stray output files
+in their own folder.
+
+</details>
 
 <details>
 <summary>💻 What experiment 1 prints</summary>
@@ -220,6 +264,18 @@ Everything below is **already installed** — this section is here for a fresh m
 | `plotly` | ✅ 6.9.0 | 37 |
 | `networkx` | ✅ 3.6.1 | 34, 35, 36 |
 | `nltk` | ✅ 3.10.2 | 31 |
+
+Check what this machine actually has, and what it is missing:
+
+```bash
+python3 -m pip list | grep -iE "pandas|numpy|openpyxl|scipy|matplotlib|seaborn|scikit-learn|plotly|networkx|nltk"
+```
+
+Anything that does not print is missing — install just that one:
+
+```bash
+python3 -m pip install <package>
+```
 
 <details>
 <summary><b>🔁 Reinstalling from scratch</b></summary>
@@ -313,17 +369,15 @@ in a lab record.
 
 ## ⚠️ Files Experiment 1 Leaves Behind
 
-Running [1.py](1.py) writes three files into the working directory:
+Running [1.py](1/1.py) writes three files **into whatever folder you ran it from**:
 
 ```
-data.csv    data.json    data.xlsx
+1.csv    1.json    1.xlsx
 ```
 
-That's the point of the exercise — it exports, then reads them back. Clean up with:
-
-```bash
-rm -f data.csv data.json data.xlsx
-```
+That's the point of the exercise — it exports, then reads them back. The filenames are relative,
+so run it as `cd 1 && python3 1.py` to keep them in `1/` instead of scattering them across the
+repo root. They are already committed, so re-running simply overwrites them — nothing to clean up.
 
 ---
 
