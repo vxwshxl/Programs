@@ -19,20 +19,6 @@ print("Univariate Normal Distribution")
 print("Mean:", mean)
 print("Standard Deviation:", std)
 
-# Plot histogram
-plt.figure(figsize=(7, 5))
-plt.hist(data, bins=30, density=True, alpha=0.6)
-
-# Plot normal distribution curve
-x = np.linspace(min(data), max(data), 100)
-y = norm.pdf(x, mean, std)
-
-plt.plot(x, y)
-plt.title("Univariate Normal Distribution")
-plt.xlabel("Value")
-plt.ylabel("Density")
-plt.show()
-
 
 # -------------------------------
 # 2. Multivariate Normal Distribution
@@ -62,11 +48,30 @@ print(np.mean(multi_data, axis=0))
 print("\nCovariance Matrix:")
 print(np.cov(multi_data, rowvar=False))
 
-# Plot multivariate data
-plt.figure(figsize=(7, 5))
-plt.scatter(multi_data[:, 0], multi_data[:, 1], alpha=0.5)
 
-plt.title("Multivariate Normal Distribution")
-plt.xlabel("Variable 1")
-plt.ylabel("Variable 2")
+# -------------------------------
+# 3. Plot both distributions together
+# -------------------------------
+
+fig, axes = plt.subplots(1, 2, figsize=(13, 5))
+
+# Histogram of the univariate data
+axes[0].hist(data, bins=30, density=True, alpha=0.6)
+
+# The fitted normal curve on top of it
+x = np.linspace(min(data), max(data), 100)
+y = norm.pdf(x, mean, std)
+
+axes[0].plot(x, y)
+axes[0].set_title("Univariate Normal Distribution")
+axes[0].set_xlabel("Value")
+axes[0].set_ylabel("Density")
+
+# Scatter of the multivariate data
+axes[1].scatter(multi_data[:, 0], multi_data[:, 1], alpha=0.5)
+axes[1].set_title("Multivariate Normal Distribution")
+axes[1].set_xlabel("Variable 1")
+axes[1].set_ylabel("Variable 2")
+
+plt.tight_layout()
 plt.show()

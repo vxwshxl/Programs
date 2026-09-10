@@ -21,32 +21,29 @@ print("Covariance Matrix:\n", covariance_matrix)
 
 print("\nCorrelation Matrix:\n", correlation_matrix)
 
-# Visualize covariance matrix
-plt.figure(figsize=(6, 5))
-plt.imshow(covariance_matrix, cmap='coolwarm')
-plt.colorbar()
-plt.xticks(range(len(df.columns)), df.columns)
-plt.yticks(range(len(df.columns)), df.columns)
-plt.title("Covariance Matrix")
+# Both matrices go on one figure so they can be compared side by side
+fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 
-for i in range(len(df.columns)):
-    for j in range(len(df.columns)):
-        plt.text(j, i, round(covariance_matrix.iloc[i, j], 2),
-                 ha='center', va='center')
+matrices = [
+    (covariance_matrix, "Covariance Matrix"),
+    (correlation_matrix, "Correlation Matrix")
+]
 
-plt.show()
+for ax, (matrix, title) in zip(axes, matrices):
+    image = ax.imshow(matrix, cmap='coolwarm')
+    fig.colorbar(image, ax=ax)
 
-# Visualize correlation matrix
-plt.figure(figsize=(6, 5))
-plt.imshow(correlation_matrix, cmap='coolwarm')
-plt.colorbar()
-plt.xticks(range(len(df.columns)), df.columns)
-plt.yticks(range(len(df.columns)), df.columns)
-plt.title("Correlation Matrix")
+    ax.set_xticks(range(len(df.columns)))
+    ax.set_xticklabels(df.columns)
+    ax.set_yticks(range(len(df.columns)))
+    ax.set_yticklabels(df.columns)
+    ax.set_title(title)
 
-for i in range(len(df.columns)):
-    for j in range(len(df.columns)):
-        plt.text(j, i, round(correlation_matrix.iloc[i, j], 2),
-                 ha='center', va='center')
+    # Write each value inside its cell
+    for i in range(len(df.columns)):
+        for j in range(len(df.columns)):
+            ax.text(j, i, round(matrix.iloc[i, j], 2),
+                    ha='center', va='center')
 
+plt.tight_layout()
 plt.show()

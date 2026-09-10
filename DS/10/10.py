@@ -13,41 +13,46 @@ data = {
 
 df = pd.DataFrame(data)
 
+# All six charts are drawn on one figure, so they appear together
+# instead of one window at a time
+fig, axes = plt.subplots(2, 3, figsize=(15, 9))
+fig.suptitle("Six Plot Types", fontsize=15)
+
 # 1. Bar Chart
-plt.bar(df['Name'], df['Salary'])
-plt.title("Salary by Employee")
-plt.xlabel("Name")
-plt.ylabel("Salary")
-plt.show()
+axes[0, 0].bar(df['Name'], df['Salary'])
+axes[0, 0].set_title("Salary by Employee")
+axes[0, 0].set_xlabel("Name")
+axes[0, 0].set_ylabel("Salary")
 
 # 2. Histogram
-plt.hist(df['Age'], bins=5)
-plt.title("Age Distribution")
-plt.xlabel("Age")
-plt.ylabel("Frequency")
-plt.show()
+axes[0, 1].hist(df['Age'], bins=5)
+axes[0, 1].set_title("Age Distribution")
+axes[0, 1].set_xlabel("Age")
+axes[0, 1].set_ylabel("Frequency")
 
 # 3. Pie Chart
-plt.pie(df['Salary'], labels=df['Name'], autopct='%1.1f%%')
-plt.title("Salary Distribution")
-plt.show()
+axes[0, 2].pie(df['Salary'], labels=df['Name'], autopct='%1.1f%%')
+axes[0, 2].set_title("Salary Distribution")
 
 # 4. Box Plot
-plt.boxplot(df['Salary'])
-plt.title("Salary Box Plot")
-plt.ylabel("Salary")
-plt.show()
+axes[1, 0].boxplot(df['Salary'])
+axes[1, 0].set_title("Salary Box Plot")
+axes[1, 0].set_ylabel("Salary")
 
 # 5. Scatter Plot
-plt.scatter(df['Age'], df['Salary'])
-plt.title("Age vs Salary")
-plt.xlabel("Age")
-plt.ylabel("Salary")
-plt.show()
+axes[1, 1].scatter(df['Age'], df['Salary'])
+axes[1, 1].set_title("Age vs Salary")
+axes[1, 1].set_xlabel("Age")
+axes[1, 1].set_ylabel("Salary")
 
 # 6. Heatmap
 correlation = df[['Age', 'Salary']].corr()
 
-sns.heatmap(correlation, annot=True)
-plt.title("Correlation Heatmap")
+sns.heatmap(correlation, annot=True, ax=axes[1, 2])
+axes[1, 2].set_title("Correlation Heatmap")
+
+# Keeps the titles and labels from overlapping
+plt.tight_layout()
+
+# One window, drawn once, holding every chart
 plt.show()

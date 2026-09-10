@@ -12,14 +12,18 @@ data = {
 
 df = pd.DataFrame(data)
 
+# Both libraries plot onto the same figure, one axis each
+fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+
 # Matplotlib visualization
-plt.plot(df['Age'], df['Salary'], marker='o')
-plt.title("Age vs Salary")
-plt.xlabel("Age")
-plt.ylabel("Salary")
-plt.show()
+axes[0].plot(df['Age'], df['Salary'], marker='o')
+axes[0].set_title("Age vs Salary using Matplotlib")
+axes[0].set_xlabel("Age")
+axes[0].set_ylabel("Salary")
 
 # Seaborn visualization
-sns.scatterplot(x='Age', y='Salary', data=df)
-plt.title("Age vs Salary using Seaborn")
+sns.scatterplot(x='Age', y='Salary', data=df, ax=axes[1])
+axes[1].set_title("Age vs Salary using Seaborn")
+
+plt.tight_layout()
 plt.show()

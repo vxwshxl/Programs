@@ -199,9 +199,22 @@ between files, no setup script, no order you have to follow.
 
 ### 🖼️ Experiments that open plot windows
 
-Anything using Matplotlib or Seaborn (**4, 5, 9, 10, 11, 12, 13, 24, 38, 39**) pauses at each
-`plt.show()` and waits. **Close the window to let the script continue** — a program with three
-plots stops three times. It has not frozen.
+Anything using Matplotlib or Seaborn (**4, 5, 9, 10, 11, 12, 13, 24, 38, 39**) pauses at
+`plt.show()` and waits. **Close the window to let the script finish** — it has not frozen.
+
+Experiments with more than one chart draw them all onto a **single figure** with
+`plt.subplots()`, so everything appears at once and there is one window to close:
+
+| Experiment | Layout |
+|:-:|:--|
+| 4 | 1 × 2 — covariance, correlation |
+| 5 | 1 × 2 — univariate, multivariate |
+| 9 | 1 × 2 — Matplotlib, Seaborn |
+| 10 | 2 × 3 — bar, histogram, pie, box, scatter, heatmap |
+| 13 | 1 × 3 — coefficients, Ridge path, Lasso path |
+
+> 💡 Calling `plt.show()` after *every* chart is what forces you to close six windows one
+> after another. Build the axes up front, then show once at the end.
 
 Running over SSH, or just want the printed numbers without the windows:
 

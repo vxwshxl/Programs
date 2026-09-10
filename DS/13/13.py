@@ -74,24 +74,26 @@ for name, model in [('Linear', linear), ('Ridge', ridge), ('Lasso', lasso)]:
     rmse = np.sqrt(mean_squared_error(y_test, y_pred))
     print(f"{name:8s} R2: {r2_score(y_test, y_pred):.4f}  RMSE: {rmse:.2f}")
 
+# Everything is drawn on one figure: the coefficients each model chose,
+# then what happens to those coefficients as the penalty grows
+fig, axes = plt.subplots(1, 3, figsize=(16, 5))
+
 # Plot 1: how the three models weight each feature
 positions = np.arange(len(X.columns))
 width = 0.25
 
-plt.figure(figsize=(8, 5))
-plt.bar(positions - width, linear.coef_, width, label="Linear")
-plt.bar(positions, ridge.coef_, width, label="Ridge")
-plt.bar(positions + width, lasso.coef_, width, label="Lasso")
+axes[0].bar(positions - width, linear.coef_, width, label="Linear")
+axes[0].bar(positions, ridge.coef_, width, label="Ridge")
+axes[0].bar(positions + width, lasso.coef_, width, label="Lasso")
 
-plt.xticks(positions, X.columns)
-plt.axhline(0, color='black', linewidth=0.8)
-plt.title("Coefficients under each penalty")
-plt.xlabel("Feature")
-plt.ylabel("Coefficient")
-plt.legend()
-plt.show()
+axes[0].set_xticks(positions)
+axes[0].set_xticklabels(X.columns, rotation=45, ha='right')
+axes[0].set_title("Coefficients under each penalty")
+axes[0].set_xlabel("Feature")
+axes[0].set_ylabel("Coefficient")
+axes[0].legend()
 
-# Plot 2: what happens as the penalty strength grows
+# Plots 2 and 3: what happens as the penalty strength grows
 alphas = np.logspace(-2, 4, 50)
 
 ridge_path = []
@@ -106,20 +108,21 @@ for a in alphas:
 ridge_path = np.array(ridge_path)
 lasso_path = np.array(lasso_path)
 
-fig, axes = plt.subplots(1, 2, figsize=(12, 5), sharey=True)
-
 for i, feature in enumerate(X.columns):
-    axes[0].plot(alphas, ridge_path[:, i], label=feature)
-    axes[1].plot(alphas, lasso_path[:, i], label=feature)
+    axes[1].plot(alphas, ridge_path[:, i], label=feature)
+    axes[2].plot(alphas, lasso_path[:, i], label=feature)
 
-axes[0].set_title("Ridge (L2) - shrinks towards zero")
-axes[1].set_title("Lasso (L1) - reaches exactly zero")
+axes[1].set_title("Ridge (L2) - shrinks towards zero")
+axes[2].set_title("Lasso (L1) - reaches exactly zero")
 
-for ax in axes:
+for ax in axes[1:]:
     ax.set_xscale('log')
-    ax.axhline(0, color='black', linewidth=0.8)
     ax.set_xlabel("Alpha")
+    ax.set_ylabel("Coefficient")
     ax.legend()
 
-axes[0].set_ylabel("Coefficient")
+for ax in axes:
+    ax.axhline(0, color='black', linewidth=0.8)
+
+plt.tight_layout()
 plt.show()
