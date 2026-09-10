@@ -326,6 +326,47 @@ python3 -m pip install <package>      # ✅ always
 pip install <package>                 # ❌ wrong Python
 ```
 
+### 🕷️ Running in Spyder 6
+
+Spyder 6 does **not** use the `python3` above. The installer ships its own bundled conda
+environment, so packages installed for `python3` are invisible to it:
+
+```
+~/Library/spyder-6/envs/spyder-runtime        Python 3.12.11
+```
+
+Out of the box it has pandas, numpy, scipy and matplotlib, but **not** seaborn, scikit-learn,
+plotly, networkx or nltk — so experiment 10 fails at `import seaborn` with
+`ModuleNotFoundError`. That environment has no `pip`, so install with the bundled conda:
+
+```bash
+~/Library/spyder-6/bin/conda install \
+  -p ~/Library/spyder-6/envs/spyder-runtime \
+  -c conda-forge -y \
+  seaborn scikit-learn plotly networkx nltk
+```
+
+Check what the Spyder environment can see:
+
+```bash
+~/Library/spyder-6/envs/spyder-runtime/bin/python -m pip list 2>/dev/null || \
+~/Library/spyder-6/bin/conda list -p ~/Library/spyder-6/envs/spyder-runtime
+```
+
+> ⚠️ Install with **conda**, not pip — `spyder-runtime` ships without pip, and pulling pip in
+> to mix installers is what breaks the environment. Reinstalling or updating Spyder can reset
+> this environment, in which case run the command again.
+
+Two Spyder details worth knowing:
+
+- **Plots land in the Plots pane**, not a window, because Spyder defaults to the `Inline`
+  backend (bottom-right of the status bar). One figure with subplots therefore shows as one
+  image — for a separate window per figure, switch to `Tools ▸ Preferences ▸ IPython console
+  ▸ Graphics ▸ Backend: Automatic`.
+- **Set the working directory** to the experiment's own folder (the box at the top right)
+  before running experiment 1, or its `1.csv` / `1.json` / `1.xlsx` land wherever Spyder
+  happened to be pointing.
+
 <details>
 <summary>🔐 If NLTK downloads fail with <code>CERTIFICATE_VERIFY_FAILED</code></summary>
 
