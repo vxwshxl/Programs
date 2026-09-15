@@ -1,4 +1,4 @@
-// 5. Write a program in c++ to sort the elements using merge sort and find its execution time using the time function.
+// 9. Write a program in c++ to sort the elements using merge sort and find its execution time using the time function.
 
 #include<iostream>
 #include<time.h>

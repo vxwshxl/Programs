@@ -1,4 +1,4 @@
-// 6. Write a program in c++ to sort the elements using quick sort and find its execution time using the time function.
+// 8. Write a program in c++ to sort the elements using quick sort and find its execution time using the time function.
 
 #include<iostream>
 #include<time.h>
