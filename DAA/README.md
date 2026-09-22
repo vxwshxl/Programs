@@ -3,7 +3,7 @@
 ![Language](https://img.shields.io/badge/Language-C++-blue.svg)
 ![Course](https://img.shields.io/badge/Course-DAA%20Lab-red.svg)
 ![University](https://img.shields.io/badge/University-Royal%20Global%20University-maroon.svg)
-![Programs](https://img.shields.io/badge/Programs-11-green.svg)
+![Programs](https://img.shields.io/badge/Programs-12-green.svg)
 
 > Searching and sorting, written the plain way — then **timed with `clock()`** so the Big-O
 > on the whiteboard shows up as an actual number in your terminal.
@@ -33,6 +33,7 @@ Every program here follows the same four beats:
 | 9 | [9_merge.cpp](9_merge.cpp) | 🧬 Merge Sort | `O(n log n)` | `O(n log n)` | `O(n log n)` |
 | 10 | [10_fibonacci_recursive.cpp](10_fibonacci_recursive.cpp) | 🌀 Fibonacci (Recursion) | `O(2ⁿ)` | `O(2ⁿ)` | `O(2ⁿ)` |
 | 11 | [11_fibonacci_dynamic.cpp](11_fibonacci_dynamic.cpp) | 📋 Fibonacci (DP) | `O(n)` | `O(n)` | `O(n)` |
+| 12 | [12_matrix_chain_multi.cpp](12_matrix_chain_multi.cpp) | 🔗 Matrix Chain Multiplication | `O(n³)` | `O(n³)` | `O(n³)` |
 
 Each `.cpp` carries a sample run pasted at the bottom as an `// Output:` comment block — handy
 when you need to write the lab record and the terminal is already closed.
@@ -48,7 +49,7 @@ g++ -o 5.out 5_insertion.cpp    # compile
 ./5.out                         # run
 ```
 
-Build all eleven in one shot:
+Build all twelve in one shot:
 
 ```bash
 for f in *.cpp; do g++ -o "${f%.cpp}.out" "$f"; done
