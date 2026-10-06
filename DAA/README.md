@@ -3,7 +3,7 @@
 ![Language](https://img.shields.io/badge/Language-C++-blue.svg)
 ![Course](https://img.shields.io/badge/Course-DAA%20Lab-red.svg)
 ![University](https://img.shields.io/badge/University-Royal%20Global%20University-maroon.svg)
-![Programs](https://img.shields.io/badge/Programs-13-green.svg)
+![Programs](https://img.shields.io/badge/Programs-16-green.svg)
 
 > Searching and sorting, written the plain way — then **timed with `clock()`** so the Big-O
 > on the whiteboard shows up as an actual number in your terminal.
@@ -35,6 +35,9 @@ Every program here follows the same four beats:
 | 11 | [11_fibonacci_dynamic.cpp](11_fibonacci_dynamic.cpp) | 📋 Fibonacci (DP) | `O(n)` | `O(n)` | `O(n)` |
 | 12 | [12_matrix_chain_multi.cpp](12_matrix_chain_multi.cpp) | 🔗 Matrix Chain Multiplication | `O(n³)` | `O(n³)` | `O(n³)` |
 | 13 | [13_knapsack_algorithm.cpp](13_knapsack_algorithm.cpp) | 🎒 0/1 Knapsack (DP) | `O(nW)` | `O(nW)` | `O(nW)` |
+| 14 | [14_lcs.cpp](14_lcs.cpp) | 🧵 LCS Length (DP) | `O(mn)` | `O(mn)` | `O(mn)` |
+| 15 | [15_print_lcs.cpp](15_print_lcs.cpp) | 🖨️ Print LCS | `O(m+n)` | `O(m+n)` | `O(m+n)` |
+| 16 | [16_huffman.cpp](16_huffman.cpp) | 🌳 Huffman Coding (Greedy) | `O(n log n)` | `O(n log n)` | `O(n log n)` |
 
 Each `.cpp` carries a sample run pasted at the bottom as an `// Output:` comment block — handy
 when you need to write the lab record and the terminal is already closed.
