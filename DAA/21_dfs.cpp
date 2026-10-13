@@ -60,7 +60,6 @@ int main() {
 // 0 1 0 0 0 1
 // 0 1 1 0 0 1
 // 0 0 0 1 1 0
-//
 // Enter the source vertex:1
 //
 // DFS traversal:	1	2	4	6	5	3

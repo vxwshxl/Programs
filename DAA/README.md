@@ -3,9 +3,9 @@
 ![Language](https://img.shields.io/badge/Language-C++-blue.svg)
 ![Course](https://img.shields.io/badge/Course-DAA%20Lab-red.svg)
 ![University](https://img.shields.io/badge/University-Royal%20Global%20University-maroon.svg)
-![Programs](https://img.shields.io/badge/Programs-17-green.svg)
+![Programs](https://img.shields.io/badge/Programs-21-green.svg)
 
-> Searching and sorting, written the plain way — then **timed with `clock()`** so the Big-O
+> Searching, sorting, DP, greedy, backtracking and graphs — written the plain way — then **timed with `clock()`** so the Big-O
 > on the whiteboard shows up as an actual number in your terminal.
 
 Every program here follows the same four beats:
@@ -22,26 +22,65 @@ Every program here follows the same four beats:
 
 | # | File | Algorithm | Best | Average | Worst |
 |:-:|------|-----------|:----:|:-------:|:-----:|
-| 1 | [1_linear.cpp](1_linear.cpp) | 🔍 Linear Search | `O(1)` | `O(n)` | `O(n)` |
-| 2 | [2_binary.cpp](2_binary.cpp) | 🎯 Binary Search | `O(1)` | `O(log n)` | `O(log n)` |
-| 3 | [3_bubble.cpp](3_bubble.cpp) | 🫧 Bubble Sort | `O(n²)` | `O(n²)` | `O(n²)` |
-| 4 | [4_selection.cpp](4_selection.cpp) | 🎪 Selection Sort | `O(n²)` | `O(n²)` | `O(n²)` |
-| 5 | [5_insertion.cpp](5_insertion.cpp) | 🃏 Insertion Sort | `O(n)` | `O(n²)` | `O(n²)` |
-| 6 | [6_radix.cpp](6_radix.cpp) | 🔢 Radix Sort | `O(d·n)` | `O(d·n)` | `O(d·n)` |
-| 7 | [7_bucket.cpp](7_bucket.cpp) | 🪣 Bucket Sort | `O(n+k)` | `O(n+k)` | `O(n²)` |
-| 8 | [8_quick.cpp](8_quick.cpp) | ⚡ Quick Sort | `O(n log n)` | `O(n log n)` | `O(n²)` |
-| 9 | [9_merge.cpp](9_merge.cpp) | 🧬 Merge Sort | `O(n log n)` | `O(n log n)` | `O(n log n)` |
+| 01 | [01_linear.cpp](01_linear.cpp) | 🔍 Linear Search | `O(1)` | `O(n)` | `O(n)` |
+| 02 | [02_binary.cpp](02_binary.cpp) | 🎯 Binary Search | `O(1)` | `O(log n)` | `O(log n)` |
+| 03 | [03_bubble.cpp](03_bubble.cpp) | 🫧 Bubble Sort | `O(n²)` | `O(n²)` | `O(n²)` |
+| 04 | [04_selection.cpp](04_selection.cpp) | 🎪 Selection Sort | `O(n²)` | `O(n²)` | `O(n²)` |
+| 05 | [05_insertion.cpp](05_insertion.cpp) | 🃏 Insertion Sort | `O(n)` | `O(n²)` | `O(n²)` |
+| 06 | [06_radix.cpp](06_radix.cpp) | 🔢 Radix Sort | `O(d·n)` | `O(d·n)` | `O(d·n)` |
+| 07 | [07_bucket.cpp](07_bucket.cpp) | 🪣 Bucket Sort | `O(n+k)` | `O(n+k)` | `O(n²)` |
+| 08 | [08_quick.cpp](08_quick.cpp) | ⚡ Quick Sort | `O(n log n)` | `O(n log n)` | `O(n²)` |
+| 09 | [09_merge.cpp](09_merge.cpp) | 🧬 Merge Sort | `O(n log n)` | `O(n log n)` | `O(n log n)` |
 | 10 | [10_fibonacci_recursive.cpp](10_fibonacci_recursive.cpp) | 🌀 Fibonacci (Recursion) | `O(2ⁿ)` | `O(2ⁿ)` | `O(2ⁿ)` |
 | 11 | [11_fibonacci_dynamic.cpp](11_fibonacci_dynamic.cpp) | 📋 Fibonacci (DP) | `O(n)` | `O(n)` | `O(n)` |
 | 12 | [12_matrix_chain_multi.cpp](12_matrix_chain_multi.cpp) | 🔗 Matrix Chain Multiplication | `O(n³)` | `O(n³)` | `O(n³)` |
 | 13 | [13_knapsack_algorithm.cpp](13_knapsack_algorithm.cpp) | 🎒 0/1 Knapsack (DP) | `O(nW)` | `O(nW)` | `O(nW)` |
-| 14 | [14_lcs.cpp](14_lcs.cpp) | 🧵 LCS Length (DP) | `O(mn)` | `O(mn)` | `O(mn)` |
-| 15 | [15_print_lcs.cpp](15_print_lcs.cpp) | 🖨️ Print LCS | `O(m+n)` | `O(m+n)` | `O(m+n)` |
-| 16 | [16_huffman.cpp](16_huffman.cpp) | 🌳 Huffman Coding (Greedy) | `O(n log n)` | `O(n log n)` | `O(n log n)` |
-| 17 | [17_fractional_knapsack.cpp](17_fractional_knapsack.cpp) | 🧀 Fractional Knapsack (Greedy) | `O(n log n)` | `O(n log n)` | `O(n log n)` |
+| 14 | [14_lcs.cpp](14_lcs.cpp) | 🧵 Longest Common Subsequence (DP) | `O(mn)` | `O(mn)` | `O(mn)` |
+| 15 | [15_fractional_knapsack.cpp](15_fractional_knapsack.cpp) | 🧀 Fractional Knapsack (Greedy) | `O(n log n)` | `O(n log n)` | `O(n log n)` |
+| 16 | [16_job_scheduling.cpp](16_job_scheduling.cpp) | 📅 Job Sequencing with Deadlines (Greedy) | `O(n log n)` | `O(n²)` | `O(n²)` |
+| 17 | [17_huffman.cpp](17_huffman.cpp) | 🌳 Huffman Coding (Greedy) | `O(n log n)` | `O(n log n)` | `O(n log n)` |
+| 18 | [18_n_queen.cpp](18_n_queen.cpp) | ♛ N-Queen (Backtracking) | `O(n!)` | `O(n!)` | `O(n!)` |
+| 19 | [19_travelling_salesman.cpp](19_travelling_salesman.cpp) | 🧳 Travelling Salesman (DP) | `O(n²·2ⁿ)` | `O(n²·2ⁿ)` | `O(n²·2ⁿ)` |
+| 20 | [20_bfs.cpp](20_bfs.cpp) | 🌊 Breadth First Search | `O(V+E)` | `O(V+E)` | `O(V+E)` |
+| 21 | [21_dfs.cpp](21_dfs.cpp) | 🕳️ Depth First Search | `O(V+E)` | `O(V+E)` | `O(V+E)` |
+
+BFS and DFS read the graph as an adjacency matrix, which makes them `O(V²)` in practice —
+`O(V+E)` is the adjacency-list bound.
 
 Each `.cpp` carries a sample run pasted at the bottom as an `// Output:` comment block — handy
 when you need to write the lab record and the terminal is already closed.
+
+---
+
+## 📒 Lab Record Index
+
+Copied from the index page of the lab notebook. **Date of Submission** is left blank to fill in.
+
+| S. No. | Name of the Experiment | Page No. | Date of Experiment | Date of Submission |
+|:------:|------------------------|:--------:|:------------------:|:------------------:|
+| 01 | Linear Search | 01 | 05/08/26 | |
+| 02 | Binary Search | 02–03 | 05/08/26 | |
+| 03 | Bubble Sort | 04 | 05/08/26 | |
+| 04 | Selection Sort | 05 | 05/08/26 | |
+| 05 | Insertion Sort | 06 | 12/08/26 | |
+| 06 | Radix Sort | 07–08 | 12/08/26 | |
+| 07 | Bucket Sort | 09–10 | 12/08/26 | |
+| 08 | Quick Sort | 11–12 | 02/09/26 | |
+| 09 | Merge Sort | 13–14 | 02/09/26 | |
+| 10 | Fibonacci Series – Recursive | 15 | 02/09/26 | |
+| 11 | Fibonacci – DP | 16 | 02/09/26 | |
+| 12 | MCM (Matrix Chain Multiplication) | 17 | 09/09/26 | |
+| 13 | 0/1 Knapsack | 18 | 09/09/26 | |
+| 14 | LCS (Longest Common Subsequence) | 19 | 09/09/26 | |
+| 15 | Fractional Knapsack | 20–21 | 16/09/26 | |
+| 16 | Task / Job Scheduling | 22–23 | 30/09/26 | |
+| 17 | Huffman Coding | 23–24 | 30/09/26 | |
+| 18 | N-Queen Problem | 26–27 | 07/10/26 | |
+| 19 | Travelling Salesman | 28–29 | 07/10/26 | |
+| 20 | BFS | 30 | 07/10/26 | |
+| 21 | DFS | 31 | 07/10/26 | |
+
+Experiment numbers match the file numbers above.
 
 ---
 
@@ -50,11 +89,11 @@ when you need to write the lab record and the terminal is already closed.
 ```bash
 cd ~/Programs/DAA
 
-g++ -o 5.out 5_insertion.cpp    # compile
-./5.out                         # run
+g++ -o 05.out 05_insertion.cpp   # compile
+./05.out                        # run
 ```
 
-Build all twelve in one shot:
+Build all of them in one shot:
 
 ```bash
 for f in *.cpp; do g++ -o "${f%.cpp}.out" "$f"; done
@@ -68,7 +107,7 @@ Recompile after every edit; the binary is only a snapshot of the source.
 ## 💻 A Real Session
 
 ```console
-$ ./3.out
+$ ./03.out
 Enter the number of elements:6
 Enter the elements:42 8 27 14 35 19
 
@@ -109,7 +148,7 @@ about 10 comparisons for 1,000 elements and only ~20 for a million. That gap *is
 Quick way to generate a big input:
 
 ```bash
-{ echo 5000; seq 5000 | sort -R; } | ./3.out
+{ echo 5000; seq 5000 | sort -R; } | ./03.out
 ```
 
 ---
