@@ -1,4 +1,4 @@
-// 16. Write a program in c++ to construct an optimal prefix code using Huffman coding (greedy method) and find its execution time using the time function.
+// 17. Write a program in c++ to construct an optimal prefix code using Huffman coding (greedy method) and find its execution time using the time function.
 
 #include<iostream>
 #include<time.h>

@@ -1,4 +1,4 @@
-// 17. Write a program in c++ to solve the fractional knapsack problem using the greedy method and find its execution time using the time function.
+// 15. Write a program in c++ to solve the fractional knapsack problem using the greedy method and find its execution time using the time function.
 
 #include<iostream>
 #include<time.h>

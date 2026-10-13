@@ -1,4 +1,4 @@
-// 14. Write a program in c++ to find the length of the longest common subsequence (LCS) of two sequences using dynamic programming and find its execution time using the time function.
+// 14. Write a program in c++ to find the longest common subsequence (LCS) of two sequences using dynamic programming and find its execution time using the time function.
 
 #include<iostream>
 #include<time.h>
@@ -6,9 +6,22 @@ using namespace std;
 
 int c[50][50];
 char b[50][50];
+char x[50],y[50];
+
+void printLCS(int i,int j) {
+    if(i==0 || j==0)
+        return;
+    if(b[i][j]=='D') {
+        printLCS(i-1,j-1);
+        cout<<x[i-1];
+    }
+    else if(b[i][j]=='U')
+        printLCS(i-1,j);
+    else
+        printLCS(i,j-1);
+}
 
 int main() {
-    char x[50],y[50];
     int m=0,n=0,i,j,count=0;
     cout<<"Enter the first sequence X:";
     cin>>x;
@@ -60,6 +73,8 @@ int main() {
                 cout<<c[i][j]<<b[i][j]<<"\t";
     }
     cout<<endl<<"Length of LCS:"<<c[m][n];
+    cout<<endl<<"LCS:";
+    printLCS(m,n);
     cout<<endl<<"Number of comparisons:"<<count;
     cout<<endl<<"Time taken:"<<fixed<<time_taken<<" seconds";
     cout<<endl<<"Time complexity: O(mn)";
@@ -82,6 +97,7 @@ int main() {
 // A	0	1U	2U	2U	3D	3U	4D
 // B	0	1D	2U	2U	3U	4D	4U
 // Length of LCS:4
+// LCS:BCBA
 // Number of comparisons:42
-// Time taken:0.000003 seconds
+// Time taken:0.000002 seconds
 // Time complexity: O(mn)
