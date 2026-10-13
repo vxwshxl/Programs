@@ -1,12 +1,33 @@
-// 15. Write a program in c++ to solve the fractional knapsack problem using the greedy method and find its execution time using the time function.
+// 15. Write a program in c to solve the fractional knapsack problem using the greedy method and find its execution time using the time function.
 
-#include<iostream>
+/*
+Algorithm: FractionalKnapsack(v, w, n, W)
+
+1. Start
+2. For i <- 1 to n do
+3.        r[i] <- v[i]/w[i]
+4.        x[i] <- 0
+5. Sort the items in decreasing order of r[i] (merge sort)
+6. remaining <- W, total <- 0
+7. For each item i in sorted order, while remaining > 0 do
+8.        if w[i] <= remaining then
+9.              x[i] <- 1
+10.             remaining <- remaining - w[i]
+11.       else
+12.             x[i] <- remaining/w[i]
+13.             remaining <- 0
+14.       total <- total + x[i]*v[i]
+15. print "Maximum value" total
+16. Stop
+*/
+
+#include<stdio.h>
 #include<time.h>
-using namespace std;
 
 double r[50];
+int count=0;
 
-void merge(int a[],int low,int mid,int high,int &count) {
+void merge(int a[],int low,int mid,int high) {
     int n1=mid-low+1,n2=high-mid;
     int left[n1],right[n2];
     int i,j,k;
@@ -32,30 +53,30 @@ void merge(int a[],int low,int mid,int high,int &count) {
         a[k++]=right[j++];
 }
 
-void mergeSort(int a[],int low,int high,int &count) {
+void mergeSort(int a[],int low,int high) {
     if(low<high) {
         int mid=(low+high)/2;
-        mergeSort(a,low,mid,count);
-        mergeSort(a,mid+1,high,count);
-        merge(a,low,mid,high,count);
+        mergeSort(a,low,mid);
+        mergeSort(a,mid+1,high);
+        merge(a,low,mid,high);
     }
 }
 
 int main() {
-    int n,i,k,count=0;
+    int n,i,k;
     double W;
-    cout<<"Enter the number of items:";
-    cin>>n;
+    printf("Enter the number of items:");
+    scanf("%d",&n);
     double v[n+1],w[n+1],x[n+1];
     int order[n];
-    cout<<"Enter the values of "<<n<<" items:";
+    printf("Enter the values of %d items:",n);
     for(i=1;i<=n;i++)
-        cin>>v[i];
-    cout<<"Enter the weights of "<<n<<" items:";
+        scanf("%lf",&v[i]);
+    printf("Enter the weights of %d items:",n);
     for(i=1;i<=n;i++)
-        cin>>w[i];
-    cout<<"Enter the capacity of the knapsack:";
-    cin>>W;
+        scanf("%lf",&w[i]);
+    printf("Enter the capacity of the knapsack:");
+    scanf("%lf",&W);
 
     clock_t start=clock();
     for(i=1;i<=n;i++) {
@@ -63,7 +84,7 @@ int main() {
         x[i]=0;
         order[i-1]=i;
     }
-    mergeSort(order,0,n-1,count);
+    mergeSort(order,0,n-1);
     double remaining=W,total=0;
     for(k=0;k<n && remaining>0;k++) {
         i=order[k];
@@ -81,16 +102,17 @@ int main() {
     clock_t end=clock();
     double time_taken=(double)(end-start)/CLOCKS_PER_SEC;
 
-    cout<<endl<<"Items in decreasing order of value/weight:"<<endl<<"Item\tValue\tWeight\tv/w\tFraction";
+    printf("\nItems in decreasing order of value/weight:\nItem\tValue\tWeight\tv/w\tFraction");
     for(k=0;k<n;k++) {
         i=order[k];
-        cout<<endl<<i<<"\t"<<v[i]<<"\t"<<w[i]<<"\t"<<r[i]<<"\t"<<x[i];
+        printf("\n%d\t%g\t%g\t%g\t%g",i,v[i],w[i],r[i],x[i]);
     }
-    cout<<endl<<"Maximum value:"<<total;
-    cout<<endl<<"Number of comparisons:"<<count;
-    cout<<endl<<"Time taken:"<<fixed<<time_taken<<" seconds";
-    cout<<endl<<"Time complexity: O(n log n)";
-    cout<<endl;
+    printf("\nMaximum value:%g",total);
+    printf("\nNumber of comparisons:%d",count);
+    printf("\nTime taken:%f seconds",time_taken);
+    printf("\nTime complexity: O(n log n)");
+    printf("\n");
+    return 0;
 }
 
 
@@ -108,5 +130,5 @@ int main() {
 // 1	10	5	2	0
 // Maximum value:105
 // Number of comparisons:8
-// Time taken:0.000005 seconds
+// Time taken:0.000006 seconds
 // Time complexity: O(n log n)

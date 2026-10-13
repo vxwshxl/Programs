@@ -1,17 +1,38 @@
-// 7. Write a program in c++ to sort the elements using bucket sort and find its execution time using the time function.
+// 7. Write a program in c to sort the elements using bucket sort and find its execution time using the time function.
 
-#include<iostream>
+/*
+Algorithm: BucketSort(A, n)
+
+1. Start
+2. max <- largest element of A
+3. For i <- 0 to (n-1) do
+4.        size[i] <- 0
+5. For i <- 0 to (n-1) do
+6.        index <- (A[i]*n)/(max+1)
+7.        bucket[index][size[index]] <- A[i]
+8.        size[index] <- size[index]+1
+9. For i <- 0 to (n-1) do
+10.       sort bucket[i] using insertion sort
+11. k <- 0
+12. For i <- 0 to (n-1) do
+13.       For j <- 0 to (size[i]-1) do
+14.             A[k] <- bucket[i][j]
+15.             k <- k+1
+16. Print the sorted array A
+17. Stop
+*/
+
+#include<stdio.h>
 #include<time.h>
-using namespace std;
 
 int main() {
     int n,i,j,k,key,index,max,count=0;
-    cout<<"Enter the number of elements:";
-    cin>>n;
+    printf("Enter the number of elements:");
+    scanf("%d",&n);
     int a[n];
-    cout<<"Enter the elements:";
+    printf("Enter the elements:");
     for(i=0;i<n;i++)
-        cin>>a[i];
+        scanf("%d",&a[i]);
 
     clock_t start=clock();
     max=a[0];
@@ -52,13 +73,14 @@ int main() {
     clock_t end=clock();
     double time_taken=(double)(end-start)/CLOCKS_PER_SEC;
 
-    cout<<endl<<"After bucket sorting:";
+    printf("\nAfter bucket sorting:");
     for(i=0;i<n;i++)
-        cout<<"\t"<<a[i];
-    cout<<endl<<"Number of comparisons:"<<count;
-    cout<<endl<<"Time taken:"<<fixed<<time_taken<<" seconds";
-    cout<<endl<<"Time complexity: average O(n+k), worst O(n^2)";
-    cout<<endl;
+        printf("\t%d",a[i]);
+    printf("\nNumber of comparisons:%d",count);
+    printf("\nTime taken:%f seconds",time_taken);
+    printf("\nTime complexity: average O(n+k), worst O(n^2)");
+    printf("\n");
+    return 0;
 }
 
 
@@ -68,5 +90,5 @@ int main() {
 //
 // After bucket sorting:	8	14	19	27	35	42
 // Number of comparisons:1
-// Time taken:0.000005 seconds
+// Time taken:0.000002 seconds
 // Time complexity: average O(n+k), worst O(n^2)

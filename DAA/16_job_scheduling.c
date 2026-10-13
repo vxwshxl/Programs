@@ -1,12 +1,31 @@
-// 16. Write a program in c++ to solve the job sequencing with deadlines problem using the greedy method and find its execution time using the time function.
+// 16. Write a program in c to solve the job sequencing with deadlines problem using the greedy method and find its execution time using the time function.
 
-#include<iostream>
+/*
+Algorithm: JobSequencing(p, d, n)
+
+1. Start
+2. maxd <- largest deadline
+3. For t <- 1 to maxd do
+4.        slot[t] <- 0
+5. Sort the jobs in decreasing order of profit p[i] (merge sort)
+6. total <- 0
+7. For each job i in sorted order do
+8.        For t <- d[i] down to 1 do
+9.              if slot[t] == 0 then
+10.                   slot[t] <- i
+11.                   total <- total + p[i]
+12.                   break
+13. print the jobs in slot[1..maxd] and total
+14. Stop
+*/
+
+#include<stdio.h>
 #include<time.h>
-using namespace std;
 
 int p[50];
+int count=0;
 
-void merge(int a[],int low,int mid,int high,int &count) {
+void merge(int a[],int low,int mid,int high) {
     int n1=mid-low+1,n2=high-mid;
     int left[n1],right[n2];
     int i,j,k;
@@ -32,26 +51,26 @@ void merge(int a[],int low,int mid,int high,int &count) {
         a[k++]=right[j++];
 }
 
-void mergeSort(int a[],int low,int high,int &count) {
+void mergeSort(int a[],int low,int high) {
     if(low<high) {
         int mid=(low+high)/2;
-        mergeSort(a,low,mid,count);
-        mergeSort(a,mid+1,high,count);
-        merge(a,low,mid,high,count);
+        mergeSort(a,low,mid);
+        mergeSort(a,mid+1,high);
+        merge(a,low,mid,high);
     }
 }
 
 int main() {
-    int n,i,k,t,maxd=0,total=0,count=0;
-    cout<<"Enter the number of jobs:";
-    cin>>n;
+    int n,i,k,t,maxd=0,total=0;
+    printf("Enter the number of jobs:");
+    scanf("%d",&n);
     int d[n+1],order[n];
-    cout<<"Enter the profits of "<<n<<" jobs:";
+    printf("Enter the profits of %d jobs:",n);
     for(i=1;i<=n;i++)
-        cin>>p[i];
-    cout<<"Enter the deadlines of "<<n<<" jobs:";
+        scanf("%d",&p[i]);
+    printf("Enter the deadlines of %d jobs:",n);
     for(i=1;i<=n;i++) {
-        cin>>d[i];
+        scanf("%d",&d[i]);
         if(d[i]>maxd)
             maxd=d[i];
     }
@@ -62,7 +81,7 @@ int main() {
         order[i-1]=i;
     for(t=1;t<=maxd;t++)
         slot[t]=0;
-    mergeSort(order,0,n-1,count);
+    mergeSort(order,0,n-1);
     for(k=0;k<n;k++) {
         i=order[k];
         for(t=d[i];t>=1;t--) {
@@ -77,20 +96,21 @@ int main() {
     clock_t end=clock();
     double time_taken=(double)(end-start)/CLOCKS_PER_SEC;
 
-    cout<<endl<<"Jobs in decreasing order of profit:"<<endl<<"Job\tProfit\tDeadline";
+    printf("\nJobs in decreasing order of profit:\nJob\tProfit\tDeadline");
     for(k=0;k<n;k++) {
         i=order[k];
-        cout<<endl<<"J"<<i<<"\t"<<p[i]<<"\t"<<d[i];
+        printf("\nJ%d\t%d\t%d",i,p[i],d[i]);
     }
-    cout<<endl<<"Job sequence:";
+    printf("\nJob sequence:");
     for(t=1;t<=maxd;t++)
         if(slot[t]!=0)
-            cout<<"\tJ"<<slot[t];
-    cout<<endl<<"Maximum profit:"<<total;
-    cout<<endl<<"Number of comparisons:"<<count;
-    cout<<endl<<"Time taken:"<<fixed<<time_taken<<" seconds";
-    cout<<endl<<"Time complexity: O(n^2)";
-    cout<<endl;
+            printf("\tJ%d",slot[t]);
+    printf("\nMaximum profit:%d",total);
+    printf("\nNumber of comparisons:%d",count);
+    printf("\nTime taken:%f seconds",time_taken);
+    printf("\nTime complexity: O(n^2)");
+    printf("\n");
+    return 0;
 }
 
 
@@ -109,5 +129,5 @@ int main() {
 // Job sequence:	J3	J1	J5
 // Maximum profit:142
 // Number of comparisons:14
-// Time taken:0.000000 seconds
+// Time taken:0.000003 seconds
 // Time complexity: O(n^2)

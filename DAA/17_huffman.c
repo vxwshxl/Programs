@@ -1,8 +1,33 @@
-// 17. Write a program in c++ to construct an optimal prefix code using Huffman coding (greedy method) and find its execution time using the time function.
+// 17. Write a program in c to construct an optimal prefix code using Huffman coding (greedy method) and find its execution time using the time function.
 
-#include<iostream>
+/*
+Algorithm: Huffman(C, f, n)
+
+1. Start
+2. Q <- min-priority queue of all n characters, keyed on frequency f
+3. For i <- 1 to (n-1) do
+4.        allocate a new node z
+5.        x <- ExtractMin(Q)
+6.        y <- ExtractMin(Q)
+7.        left[z] <- x
+8.        right[z] <- y
+9.        f[z] <- f[x] + f[y]
+10.       Insert(Q, z)
+11. root <- ExtractMin(Q)
+12. PrintCodes(root, "")
+13. Stop
+
+Algorithm: PrintCodes(z, code)
+
+1. If z is a leaf then
+2.        print character of z and code
+3.        Return
+4. PrintCodes(left[z], code + "0")
+5. PrintCodes(right[z], code + "1")
+*/
+
+#include<stdio.h>
 #include<time.h>
-using namespace std;
 
 char ch[100];
 int f[100],lft[100],rgt[100];
@@ -53,12 +78,13 @@ void insert(int z) {
 }
 
 void printCodes(int z,int depth) {
+    int i;
     if(lft[z]==-1 && rgt[z]==-1) {
-        cout<<endl<<ch[z]<<"\t"<<f[z]<<"\t";
+        printf("\n%c\t%d\t",ch[z],f[z]);
         if(depth==0)
-            cout<<"0";
-        for(int i=0;i<depth;i++)
-            cout<<code[i];
+            printf("0");
+        for(i=0;i<depth;i++)
+            printf("%d",code[i]);
         return;
     }
     code[depth]=0;
@@ -69,14 +95,14 @@ void printCodes(int z,int depth) {
 
 int main() {
     int n,i;
-    cout<<"Enter the number of characters:";
-    cin>>n;
-    cout<<"Enter the "<<n<<" characters:";
+    printf("Enter the number of characters:");
+    scanf("%d",&n);
+    printf("Enter the %d characters:",n);
     for(i=0;i<n;i++)
-        cin>>ch[i];
-    cout<<"Enter the frequencies of "<<n<<" characters:";
+        scanf(" %c",&ch[i]);
+    printf("Enter the frequencies of %d characters:",n);
     for(i=0;i<n;i++) {
-        cin>>f[i];
+        scanf("%d",&f[i]);
         lft[i]=rgt[i]=-1;
     }
 
@@ -97,13 +123,14 @@ int main() {
     clock_t end=clock();
     double time_taken=(double)(end-start)/CLOCKS_PER_SEC;
 
-    cout<<endl<<"Huffman codes:"<<endl<<"Char\tFreq\tCode";
+    printf("\nHuffman codes:\nChar\tFreq\tCode");
     printCodes(root,0);
-    cout<<endl<<"Total frequency at root:"<<f[root];
-    cout<<endl<<"Number of comparisons:"<<comp;
-    cout<<endl<<"Time taken:"<<fixed<<time_taken<<" seconds";
-    cout<<endl<<"Time complexity: O(n log n)";
-    cout<<endl;
+    printf("\nTotal frequency at root:%d",f[root]);
+    printf("\nNumber of comparisons:%d",comp);
+    printf("\nTime taken:%f seconds",time_taken);
+    printf("\nTime complexity: O(n log n)");
+    printf("\n");
+    return 0;
 }
 
 
@@ -122,5 +149,5 @@ int main() {
 // d	16	111
 // Total frequency at root:100
 // Number of comparisons:27
-// Time taken:0.000000 seconds
+// Time taken:0.000005 seconds
 // Time complexity: O(n log n)

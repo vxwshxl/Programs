@@ -1,6 +1,6 @@
 # ⚡ Design & Analysis of Algorithms
 
-![Language](https://img.shields.io/badge/Language-C++-blue.svg)
+![Language](https://img.shields.io/badge/Language-C-blue.svg)
 ![Course](https://img.shields.io/badge/Course-DAA%20Lab-red.svg)
 ![University](https://img.shields.io/badge/University-Royal%20Global%20University-maroon.svg)
 ![Programs](https://img.shields.io/badge/Programs-21-green.svg)
@@ -22,33 +22,39 @@ Every program here follows the same four beats:
 
 | # | File | Algorithm | Best | Average | Worst |
 |:-:|------|-----------|:----:|:-------:|:-----:|
-| 01 | [01_linear.cpp](01_linear.cpp) | 🔍 Linear Search | `O(1)` | `O(n)` | `O(n)` |
-| 02 | [02_binary.cpp](02_binary.cpp) | 🎯 Binary Search | `O(1)` | `O(log n)` | `O(log n)` |
-| 03 | [03_bubble.cpp](03_bubble.cpp) | 🫧 Bubble Sort | `O(n²)` | `O(n²)` | `O(n²)` |
-| 04 | [04_selection.cpp](04_selection.cpp) | 🎪 Selection Sort | `O(n²)` | `O(n²)` | `O(n²)` |
-| 05 | [05_insertion.cpp](05_insertion.cpp) | 🃏 Insertion Sort | `O(n)` | `O(n²)` | `O(n²)` |
-| 06 | [06_radix.cpp](06_radix.cpp) | 🔢 Radix Sort | `O(d·n)` | `O(d·n)` | `O(d·n)` |
-| 07 | [07_bucket.cpp](07_bucket.cpp) | 🪣 Bucket Sort | `O(n+k)` | `O(n+k)` | `O(n²)` |
-| 08 | [08_quick.cpp](08_quick.cpp) | ⚡ Quick Sort | `O(n log n)` | `O(n log n)` | `O(n²)` |
-| 09 | [09_merge.cpp](09_merge.cpp) | 🧬 Merge Sort | `O(n log n)` | `O(n log n)` | `O(n log n)` |
-| 10 | [10_fibonacci_recursive.cpp](10_fibonacci_recursive.cpp) | 🌀 Fibonacci (Recursion) | `O(2ⁿ)` | `O(2ⁿ)` | `O(2ⁿ)` |
-| 11 | [11_fibonacci_dynamic.cpp](11_fibonacci_dynamic.cpp) | 📋 Fibonacci (DP) | `O(n)` | `O(n)` | `O(n)` |
-| 12 | [12_matrix_chain_multi.cpp](12_matrix_chain_multi.cpp) | 🔗 Matrix Chain Multiplication | `O(n³)` | `O(n³)` | `O(n³)` |
-| 13 | [13_knapsack_algorithm.cpp](13_knapsack_algorithm.cpp) | 🎒 0/1 Knapsack (DP) | `O(nW)` | `O(nW)` | `O(nW)` |
-| 14 | [14_lcs.cpp](14_lcs.cpp) | 🧵 Longest Common Subsequence (DP) | `O(mn)` | `O(mn)` | `O(mn)` |
-| 15 | [15_fractional_knapsack.cpp](15_fractional_knapsack.cpp) | 🧀 Fractional Knapsack (Greedy) | `O(n log n)` | `O(n log n)` | `O(n log n)` |
-| 16 | [16_job_scheduling.cpp](16_job_scheduling.cpp) | 📅 Job Sequencing with Deadlines (Greedy) | `O(n log n)` | `O(n²)` | `O(n²)` |
-| 17 | [17_huffman.cpp](17_huffman.cpp) | 🌳 Huffman Coding (Greedy) | `O(n log n)` | `O(n log n)` | `O(n log n)` |
-| 18 | [18_n_queen.cpp](18_n_queen.cpp) | ♛ N-Queen (Backtracking) | `O(n!)` | `O(n!)` | `O(n!)` |
-| 19 | [19_travelling_salesman.cpp](19_travelling_salesman.cpp) | 🧳 Travelling Salesman (DP) | `O(n²·2ⁿ)` | `O(n²·2ⁿ)` | `O(n²·2ⁿ)` |
-| 20 | [20_bfs.cpp](20_bfs.cpp) | 🌊 Breadth First Search | `O(V+E)` | `O(V+E)` | `O(V+E)` |
-| 21 | [21_dfs.cpp](21_dfs.cpp) | 🕳️ Depth First Search | `O(V+E)` | `O(V+E)` | `O(V+E)` |
+| 01 | [01_linear.c](01_linear.c) | 🔍 Linear Search | `O(1)` | `O(n)` | `O(n)` |
+| 02 | [02_binary.c](02_binary.c) | 🎯 Binary Search | `O(1)` | `O(log n)` | `O(log n)` |
+| 03 | [03_bubble.c](03_bubble.c) | 🫧 Bubble Sort | `O(n²)` | `O(n²)` | `O(n²)` |
+| 04 | [04_selection.c](04_selection.c) | 🎪 Selection Sort | `O(n²)` | `O(n²)` | `O(n²)` |
+| 05 | [05_insertion.c](05_insertion.c) | 🃏 Insertion Sort | `O(n)` | `O(n²)` | `O(n²)` |
+| 06 | [06_radix.c](06_radix.c) | 🔢 Radix Sort | `O(d·n)` | `O(d·n)` | `O(d·n)` |
+| 07 | [07_bucket.c](07_bucket.c) | 🪣 Bucket Sort | `O(n+k)` | `O(n+k)` | `O(n²)` |
+| 08 | [08_quick.c](08_quick.c) | ⚡ Quick Sort | `O(n log n)` | `O(n log n)` | `O(n²)` |
+| 09 | [09_merge.c](09_merge.c) | 🧬 Merge Sort | `O(n log n)` | `O(n log n)` | `O(n log n)` |
+| 10 | [10_fibonacci_recursive.c](10_fibonacci_recursive.c) | 🌀 Fibonacci (Recursion) | `O(2ⁿ)` | `O(2ⁿ)` | `O(2ⁿ)` |
+| 11 | [11_fibonacci_dynamic.c](11_fibonacci_dynamic.c) | 📋 Fibonacci (DP) | `O(n)` | `O(n)` | `O(n)` |
+| 12 | [12_matrix_chain_multi.c](12_matrix_chain_multi.c) | 🔗 Matrix Chain Multiplication | `O(n³)` | `O(n³)` | `O(n³)` |
+| 13 | [13_knapsack_algorithm.c](13_knapsack_algorithm.c) | 🎒 0/1 Knapsack (DP) | `O(nW)` | `O(nW)` | `O(nW)` |
+| 14 | [14_lcs.c](14_lcs.c) | 🧵 Longest Common Subsequence (DP) | `O(mn)` | `O(mn)` | `O(mn)` |
+| 15 | [15_fractional_knapsack.c](15_fractional_knapsack.c) | 🧀 Fractional Knapsack (Greedy) | `O(n log n)` | `O(n log n)` | `O(n log n)` |
+| 16 | [16_job_scheduling.c](16_job_scheduling.c) | 📅 Job Sequencing with Deadlines (Greedy) | `O(n log n)` | `O(n²)` | `O(n²)` |
+| 17 | [17_huffman.c](17_huffman.c) | 🌳 Huffman Coding (Greedy) | `O(n log n)` | `O(n log n)` | `O(n log n)` |
+| 18 | [18_n_queen.c](18_n_queen.c) | ♛ N-Queen (Backtracking) | `O(n!)` | `O(n!)` | `O(n!)` |
+| 19 | [19_travelling_salesman.c](19_travelling_salesman.c) | 🧳 Travelling Salesman (DP) | `O(n²·2ⁿ)` | `O(n²·2ⁿ)` | `O(n²·2ⁿ)` |
+| 20 | [20_bfs.c](20_bfs.c) | 🌊 Breadth First Search | `O(V+E)` | `O(V+E)` | `O(V+E)` |
+| 21 | [21_dfs.c](21_dfs.c) | 🕳️ Depth First Search | `O(V+E)` | `O(V+E)` | `O(V+E)` |
 
 BFS and DFS read the graph as an adjacency matrix, which makes them `O(V²)` in practice —
 `O(V+E)` is the adjacency-list bound.
 
-Each `.cpp` carries a sample run pasted at the bottom as an `// Output:` comment block — handy
-when you need to write the lab record and the terminal is already closed.
+Each `.c` file is laid out the way it goes into the lab record:
+
+1. **Aim** — the question, as the first comment line
+2. **Algorithm** — numbered steps in a `/* ... */` block, matching the code line for line
+3. **Program** — the C source
+4. **Output** — a sample run pasted at the bottom as an `// Output:` comment block
+
+Handy when you need to write the record and the terminal is already closed.
 
 ---
 
@@ -89,14 +95,14 @@ Experiment numbers match the file numbers above.
 ```bash
 cd ~/Programs/DAA
 
-g++ -o 05.out 05_insertion.cpp   # compile
+gcc -o 05.out 05_insertion.c     # compile
 ./05.out                        # run
 ```
 
 Build all of them in one shot:
 
 ```bash
-for f in *.cpp; do g++ -o "${f%.cpp}.out" "$f"; done
+for f in *.c; do gcc -o "${f%.c}.out" "$f"; done
 ```
 
 The `.out` binaries are gitignored, so build freely — nothing leaks into commits.
@@ -155,10 +161,11 @@ Quick way to generate a big input:
 
 ## 🛠️ Built With
 
-- `<iostream>` — I/O, nothing more
+- `<stdio.h>` — `printf` and `scanf`, nothing more
+- `<string.h>` — `strlen`, only in LCS
 - `<time.h>` — `clock()`, `clock_t`, `CLOCKS_PER_SEC`
 
-No STL containers, no `<algorithm>`, no `std::sort`. Every loop is written out by hand,
+No library sorting, no `qsort`. Every loop is written out by hand,
 because the point is the loop.
 
 <details>
@@ -166,9 +173,9 @@ because the point is the loop.
 
 <br>
 
-The arrays are sized from a runtime variable. That's a **variable length array** — standard in C,
-a compiler extension in C++. GCC and Clang accept it happily, and every lab compiler does too;
-`-Wall` will mention it. Swap in `int *a = new int[n];` if you ever need it strictly standard.
+The arrays are sized from a runtime variable. That's a **variable length array**, standard since
+C99, and GCC and Clang accept it by default. On a very old compiler such as Turbo C, give the array
+a fixed size like `int a[100];` instead.
 
 </details>
 
@@ -176,10 +183,10 @@ a compiler extension in C++. GCC and Clang accept it happily, and every lab comp
 
 ## ⚙️ Requirements
 
-A C++ compiler — that's the whole list.
+A C compiler — that's the whole list.
 
 - **macOS** → `xcode-select --install`
-- **Linux** → `sudo apt install g++`
+- **Linux** → `sudo apt install gcc`
 - **Windows** → MinGW-w64, or WSL
 
 ---
