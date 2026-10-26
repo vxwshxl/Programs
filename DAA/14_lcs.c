@@ -112,6 +112,7 @@ int main() {
     printf("\nNumber of comparisons:%d",count);
     printf("\nTime taken:%f seconds",time_taken);
     printf("\nTime complexity: O(mn)");
+    printf("\nSpace complexity: O(mn)");
     printf("\n");
     return 0;
 }
@@ -136,3 +137,4 @@ int main() {
 // Number of comparisons:42
 // Time taken:0.000002 seconds
 // Time complexity: O(mn)
+// Space complexity: O(mn)

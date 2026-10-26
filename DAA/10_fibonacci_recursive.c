@@ -44,6 +44,7 @@ int main() {
     printf("\nNumber of function calls:%d",calls);
     printf("\nTime taken:%f seconds",time_taken);
     printf("\nTime complexity: O(2^n)");
+    printf("\nSpace complexity: O(n)");
     printf("\n");
     return 0;
 }
@@ -56,3 +57,4 @@ int main() {
 // Number of function calls:276
 // Time taken:0.000009 seconds
 // Time complexity: O(2^n)
+// Space complexity: O(n)

@@ -74,6 +74,7 @@ int main() {
     printf("\nNumber of comparisons:%d",count);
     printf("\nTime taken:%f seconds",time_taken);
     printf("\nTime complexity: O(n log n) average, O(n^2) worst");
+    printf("\nSpace complexity: O(log n) average, O(n) worst");
     printf("\n");
     return 0;
 }
@@ -87,3 +88,4 @@ int main() {
 // Number of comparisons:9
 // Time taken:0.000006 seconds
 // Time complexity: O(n log n) average, O(n^2) worst
+// Space complexity: O(log n) average, O(n) worst

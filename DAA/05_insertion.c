@@ -51,6 +51,7 @@ int main() {
     printf("\nNumber of comparisons:%d",count);
     printf("\nTime taken:%f seconds",time_taken);
     printf("\nTime complexity: best case O(n), worst case O(n^2)");
+    printf("\nSpace complexity: O(1)");
     printf("\n");
     return 0;
 }
@@ -64,3 +65,4 @@ int main() {
 // Number of comparisons:12
 // Time taken:0.000005 seconds
 // Time complexity: best case O(n), worst case O(n^2)
+// Space complexity: O(1)

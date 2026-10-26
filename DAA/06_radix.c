@@ -79,6 +79,7 @@ int main() {
     printf("\nNumber of operations:%d",count);
     printf("\nTime taken:%f seconds",time_taken);
     printf("\nTime complexity: O(d*n)");
+    printf("\nSpace complexity: O(n+k)");
     printf("\n");
     return 0;
 }
@@ -92,3 +93,4 @@ int main() {
 // Number of operations:24
 // Time taken:0.000009 seconds
 // Time complexity: O(d*n)
+// Space complexity: O(n+k)

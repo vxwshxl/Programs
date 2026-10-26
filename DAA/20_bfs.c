@@ -68,6 +68,7 @@ int main() {
     printf("\nNumber of comparisons:%d",count);
     printf("\nTime taken:%f seconds",time_taken);
     printf("\nTime complexity: O(V+E) with adjacency list, O(V^2) with adjacency matrix");
+    printf("\nSpace complexity: O(V+E) with adjacency list, O(V^2) with adjacency matrix");
     printf("\n");
     return 0;
 }
@@ -95,3 +96,4 @@ int main() {
 // Number of comparisons:36
 // Time taken:0.000003 seconds
 // Time complexity: O(V+E) with adjacency list, O(V^2) with adjacency matrix
+// Space complexity: O(V+E) with adjacency list, O(V^2) with adjacency matrix
