@@ -15,19 +15,19 @@ instructions.
 
 | Folder | Subject | Language | Experiments |
 |--------|---------|----------|:-----------:|
-| [`DAA/`](DAA/) | Design & Analysis of Algorithms | C | 21 |
-| [`DS/`](DS/) | Introduction to Data Science | Python | 40 |
+| [`DAA LAB/`](DAA%20LAB/) | Design & Analysis of Algorithms | C | 21 |
+| [`DS LAB/`](DS%20LAB/) | Introduction to Data Science | Python | 40 |
 | [`DBMS/`](DBMS/) | Database Management Systems | MySQL | 9 |
 | [`c++/`](c++/) | Object-Oriented Programming in C++ | C++ | 56 |
 | [`mp/`](mp/) | Microprocessors (8085 / 8086) | Assembly | 15 |
 | [`python/`](python/) | Python Programming | Python | 5 |
 
-### Design & Analysis of Algorithms — [`DAA/`](DAA/)
+### Design & Analysis of Algorithms — [`DAA LAB/`](DAA%20LAB/)
 Searching, sorting, divide and conquer, dynamic programming, greedy methods, backtracking and
 graph traversal. Every program times its algorithm with `clock()` and counts its basic
 operations. Each file follows the lab-record layout: aim, algorithm, program, sample output.
 
-### Introduction to Data Science — [`DS/`](DS/)
+### Introduction to Data Science — [`DS LAB/`](DS%20LAB/)
 A complete data pipeline across 40 experiments: importing, cleaning, exploratory analysis,
 modelling and evaluation with Pandas, NumPy, SciPy, Scikit-learn and Seaborn. Each experiment
 lives in its own numbered folder.
