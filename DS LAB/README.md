@@ -10,7 +10,7 @@
 ![Dept](https://img.shields.io/badge/Dept.%20of%20CSE-RSET-maroon?style=for-the-badge)
 
 ![Experiments](https://img.shields.io/badge/Experiments-40-blueviolet?style=flat-square)
-![Status](https://img.shields.io/badge/Progress-13%20%2F%2040-orange?style=flat-square)
+![Status](https://img.shields.io/badge/Progress-40%20%2F%2040-brightgreen?style=flat-square)
 ![Datasets](https://img.shields.io/badge/External%20datasets-not%20required-brightgreen?style=flat-square)
 
 </div>
@@ -177,7 +177,7 @@ Nodes, edges, and the cliques between them.
 Every experiment lives in **its own numbered folder** — experiment 11 is `11/11.py`, not `11.py`.
 
 ```bash
-cd ~/Programs/DS
+cd ~/Programs/"DS LAB"
 
 python3 11/11.py          # run experiment 11
 python3 1/1.py            # run experiment 1
@@ -187,7 +187,7 @@ Or step into the folder first. Do it this way for **experiment 1**, so the files
 land in `1/` instead of the repo root:
 
 ```bash
-cd ~/Programs/DS/1
+cd ~/Programs/"DS LAB"/1
 python3 1.py
 ```
 
@@ -199,7 +199,7 @@ between files, no setup script, no order you have to follow.
 
 ### 🖼️ Experiments that open plot windows
 
-Anything using Matplotlib or Seaborn (**4, 5, 9, 10, 11, 12, 13, 24, 38, 39**) pauses at
+Anything using Matplotlib or Seaborn (**4, 5, 9–26, 28–30, 33–36, 38–40**) pauses at
 `plt.show()` and waits. **Close the window to let the script finish** — it has not frozen.
 
 Experiments with more than one chart draw them all onto a **single figure** with
@@ -212,6 +212,18 @@ Experiments with more than one chart draw them all onto a **single figure** with
 | 9 | 1 × 2 — Matplotlib, Seaborn |
 | 10 | 2 × 3 — bar, histogram, pie, box, scatter, heatmap |
 | 13 | 1 × 3 — coefficients, Ridge path, Lasso path |
+| 18 | 1 × 3 — decision boundary for linear, poly, rbf kernels |
+| 22 | 1 × 2 — test-set metrics, CV accuracy spread |
+| 25 | 1 × 5 — true groups + four clustering algorithms |
+| 28 | 2 rows — variance curve, 2D projection, digit rebuilt from fewer components |
+| 34 | 1 × 3 — friendship graph, karate club by centrality, degree histogram |
+| 35 | 1 × 4 — actual split vs three detected community sets |
+| 38 | **2 windows** — the pair plot is its own figure, plus 1 × 2 PCA / t-SNE |
+| 39 | 2 × 3 — EDA overview |
+| 40 | 2 × 2 — class balance, top features, confusion matrix, ROC |
+
+Experiments **1–3, 6–8, 27, 31, 32** only print — no window. **37** (Plotly) opens in your web
+browser instead of a Matplotlib window.
 
 > 💡 Calling `plt.show()` after *every* chart is what forces you to close six windows one
 > after another. Build the axes up front, then show once at the end.
@@ -228,7 +240,7 @@ MPLBACKEND=Agg python3 13/13.py     # skip the plots, keep the output
 <br>
 
 ```bash
-cd ~/Programs/DS
+cd ~/Programs/"DS LAB"
 
 for d in $(ls -d */ | sort -n); do
   n=${d%/}
