@@ -188,7 +188,7 @@ Background knowledge for the number-based programs:
 - Note: `<conio.h>` and `getch()`/`clrscr()` are **Turbo C++ specific** and not standard C++
 - Compiling from terminal:
   ```bash
-  g++ "1. dividend and divisor - quotient and remainder.cpp" -o program
+  g++ "01. dividend and divisor - quotient and remainder.cpp" -o program
   ./program
   ```
 

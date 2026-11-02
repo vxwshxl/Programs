@@ -46,9 +46,9 @@ Getting bytes off disk and into a clean `DataFrame`.
 
 | # | File | Experiment |
 |:-:|:-----|:-----------|
-| 01 | [1.py](1/1.py) | 📄 Import & export — CSV, Excel, JSON |
-| 02 | [2.py](2/2.py) | 🧹 Preprocessing — missing values, duplicates, inconsistencies |
-| 08 | [8.py](8/8.py) | 🔧 Manipulate & transform with Pandas |
+| 01 | [01.py](01/01.py) | 📄 Import & export — CSV, Excel, JSON |
+| 02 | [02.py](02/02.py) | 🧹 Preprocessing — missing values, duplicates, inconsistencies |
+| 08 | [08.py](08/08.py) | 🔧 Manipulate & transform with Pandas |
 
 </td></tr>
 <tr><td>
@@ -58,11 +58,11 @@ The numbers behind the numbers.
 
 | # | File | Experiment |
 |:-:|:-----|:-----------|
-| 03 | [3.py](3/3.py) | 🧮 Mean, median, mode, variance, std. deviation, covariance |
-| 04 | [4.py](4/4.py) | 🔗 Covariance & correlation matrices |
-| 05 | [5.py](5/5.py) | 🔔 Univariate & multivariate normal distributions |
-| 06 | [6.py](6/6.py) | ⚖️ Hypothesis testing with SciPy |
-| 07 | [7.py](7/7.py) | 📏 Confidence intervals for population parameters |
+| 03 | [03.py](03/03.py) | 🧮 Mean, median, mode, variance, std. deviation, covariance |
+| 04 | [04.py](04/04.py) | 🔗 Covariance & correlation matrices |
+| 05 | [05.py](05/05.py) | 🔔 Univariate & multivariate normal distributions |
+| 06 | [06.py](06/06.py) | ⚖️ Hypothesis testing with SciPy |
+| 07 | [07.py](07/07.py) | 📏 Confidence intervals for population parameters |
 
 </td></tr>
 <tr><td>
@@ -72,7 +72,7 @@ Making the data admit what it's hiding.
 
 | # | File | Experiment |
 |:-:|:-----|:-----------|
-| 09 | [9.py](9/9.py) | 🎨 Matplotlib & Seaborn basics |
+| 09 | [09.py](09/09.py) | 🎨 Matplotlib & Seaborn basics |
 | 10 | [10.py](10/10.py) | 📊 Bar, histogram, pie, box, scatter, heatmap |
 | 37 | [37.py](37/37.py) | 🖱️ Interactive charts with Plotly |
 | 38 | [38.py](38/38.py) | 🕸️ Pair plots & multidimensional views |
@@ -180,15 +180,15 @@ Every experiment lives in **its own numbered folder** — experiment 11 is `11/1
 cd ~/Programs/"DS LAB"
 
 python3 11/11.py          # run experiment 11
-python3 1/1.py            # run experiment 1
+python3 01/01.py          # run experiment 1
 ```
 
 Or step into the folder first. Do it this way for **experiment 1**, so the files it writes
-land in `1/` instead of the repo root:
+land in `01/` instead of the repo root:
 
 ```bash
-cd ~/Programs/"DS LAB"/1
-python3 1.py
+cd ~/Programs/"DS LAB"/01
+python3 01.py
 ```
 
 Each file is standalone. Open it, read the `# N.` header at the top, run it — no imports
@@ -261,7 +261,7 @@ in their own folder.
 <br>
 
 ```console
-$ python3 1.py
+$ python3 01.py
 CSV Data:
        Name  Age
 0    Alice   25
@@ -329,7 +329,7 @@ This machine has **two Pythons**, and the shortcuts point at different ones:
 | `python3` | Framework **3.14** | ✅ where every package lives — run scripts with this |
 | `pip` → `python` → `python3.10` | Homebrew **3.10** | ❌ empty, installs land where nothing runs |
 
-Install with bare `pip` and the packages vanish into 3.10 while `python3 1.py` keeps
+Install with bare `pip` and the packages vanish into 3.10 while `python3 01.py` keeps
 reporting `ModuleNotFoundError`. Prefixing with `python3 -m` guarantees the installer and the
 interpreter are the same one:
 
@@ -376,7 +376,7 @@ Two Spyder details worth knowing:
   image — for a separate window per figure, switch to `Tools ▸ Preferences ▸ IPython console
   ▸ Graphics ▸ Backend: Automatic`.
 - **Set the working directory** to the experiment's own folder (the box at the top right)
-  before running experiment 1, or its `1.csv` / `1.json` / `1.xlsx` land wherever Spyder
+  before running experiment 1, or its `01.csv` / `01.json` / `01.xlsx` land wherever Spyder
   happened to be pointing.
 
 <details>
@@ -435,14 +435,14 @@ in a lab record.
 
 ## ⚠️ Files Experiment 1 Leaves Behind
 
-Running [1.py](1/1.py) writes three files **into whatever folder you ran it from**:
+Running [01.py](01/01.py) writes three files **into whatever folder you ran it from**:
 
 ```
-1.csv    1.json    1.xlsx
+01.csv    01.json    01.xlsx
 ```
 
 That's the point of the exercise — it exports, then reads them back. The filenames are relative,
-so run it as `cd 1 && python3 1.py` to keep them in `1/` instead of scattering them across the
+so run it as `cd 01 && python3 01.py` to keep them in `01/` instead of scattering them across the
 repo root. They are already committed, so re-running simply overwrites them — nothing to clean up.
 
 ---

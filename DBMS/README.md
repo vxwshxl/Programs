@@ -31,14 +31,14 @@ To run these queries on your local machine:
 
 | Sl. No. | Experiment / Query Set Description | Status | File (Detailed Guide) |
 |:---:|---|:---:|---|
-| 2 | Employee Database & Basic HR/Salary Queries | Completed | [2. employee-database-queries.md](./2.%20employee-database-queries.md) |
-| 3 | Employee Salary Computations (DA, TA, HRA, TAX, GROSS, NET) | Completed | [3. employee-salary-computations.md](./3.%20employee-salary-computations.md) |
-| 4 | Library Management System Queries (Subqueries, Joins, Date filtering) | Completed | [4. library-management-system.md](./4.%20library-management-system.md) |
-| 5 | Customer Purchase Database & Aggregations (Foreign Keys, Joins) | Completed | [5. customer-purchase-database.md](./5.%20customer-purchase-database.md) |
-| 6 | Movie Review System Schema (LEFT JOIN, LIMIT, AVG Rating) | Completed | [6. movie-review-system.md](./6.%20movie-review-system.md) |
-| 7 | Library Joins, UNION operations & Referential Integrity | Completed | [7. library-joins-union.md](./7.%20library-joins-union.md) |
-| 8 | Stored Procedures (Arithmetic, Max Salary, Subject Enrollments Count) | Completed | [8. stored-procedures.md](./8.%20stored-procedures.md) |
-| 9 | Student Triggers (Logging inserts, Age & Marks validation) | Completed | [9. student-triggers.md](./9.%20student-triggers.md) |
+| 2 | Employee Database & Basic HR/Salary Queries | Completed | [02. employee-database-queries.md](./02.%20employee-database-queries.md) |
+| 3 | Employee Salary Computations (DA, TA, HRA, TAX, GROSS, NET) | Completed | [03. employee-salary-computations.md](./03.%20employee-salary-computations.md) |
+| 4 | Library Management System Queries (Subqueries, Joins, Date filtering) | Completed | [04. library-management-system.md](./04.%20library-management-system.md) |
+| 5 | Customer Purchase Database & Aggregations (Foreign Keys, Joins) | Completed | [05. customer-purchase-database.md](./05.%20customer-purchase-database.md) |
+| 6 | Movie Review System Schema (LEFT JOIN, LIMIT, AVG Rating) | Completed | [06. movie-review-system.md](./06.%20movie-review-system.md) |
+| 7 | Library Joins, UNION operations & Referential Integrity | Completed | [07. library-joins-union.md](./07.%20library-joins-union.md) |
+| 8 | Stored Procedures (Arithmetic, Max Salary, Subject Enrollments Count) | Completed | [08. stored-procedures.md](./08.%20stored-procedures.md) |
+| 9 | Student Triggers (Logging inserts, Age & Marks validation) | Completed | [09. student-triggers.md](./09.%20student-triggers.md) |
 | 10 | Employee Salary Update Validation Trigger | Completed | [10. employee-salary-validation-trigger.md](./10.%20employee-salary-validation-trigger.md) |
 
 ---
