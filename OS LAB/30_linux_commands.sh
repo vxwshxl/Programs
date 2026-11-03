@@ -99,5 +99,34 @@ rm -rf "$work"
 #
 #
 # == xclock / oclock: graphical clocks (need X11) ==
+# Starting xclock (close its window to continue)
+#
+#   [ an xclock window opens ]
+#   +--------- xclock ---------+
+#   |            12            |
+#   |      11    |     1       |
+#   |   10       |        2    |
+#   |            |             |
+#   |  9         o-------  3   |
+#   |                          |
+#   |   8                 4    |
+#   |      7           5       |
+#   |            6             |
+#   +--------------------------+
+#
+# Starting oclock (close its window to continue)
+#
+#   [ an oclock window opens ]
+#          .-""""""""-.
+#        .'     |      '.
+#       /       |        \
+#      ;        |         ;
+#      |        o------   |
+#      ;                  ;
+#       \                /
+#        '.            .'
+#          '-........-'
+#
+# (On a machine without X11 the script prints instead:)
 # xclock: not available here (install x11-apps and run inside X11)
 # oclock: not available here (install x11-apps and run inside X11)
