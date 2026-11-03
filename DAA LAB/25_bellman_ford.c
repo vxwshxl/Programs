@@ -1,4 +1,4 @@
-// 24. Write a program in c to find the shortest path from a source vertex to all other vertices using the Bellman-Ford algorithm and find its execution time using the time function.
+// 25. Write a program in c to find the shortest path from a source vertex to all other vertices using the Bellman-Ford algorithm and find its execution time using the time function.
 
 /*
 Algorithm: BELLMAN-FORD(G, w, s)

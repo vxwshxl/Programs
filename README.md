@@ -15,7 +15,7 @@ instructions.
 
 | Folder | Subject | Language | Experiments |
 |--------|---------|----------|:-----------:|
-| [`DAA LAB/`](DAA%20LAB/) | Design & Analysis of Algorithms | C | 21 |
+| [`DAA LAB/`](DAA%20LAB/) | Design & Analysis of Algorithms | C | 25 |
 | [`DS LAB/`](DS%20LAB/) | Introduction to Data Science | Python | 40 |
 | [`DBMS/`](DBMS/) | Database Management Systems | MySQL | 9 |
 | [`c++/`](c++/) | Object-Oriented Programming in C++ | C++ | 56 |
@@ -23,7 +23,7 @@ instructions.
 | [`python/`](python/) | Python Programming | Python | 5 |
 
 ### Design & Analysis of Algorithms — [`DAA LAB/`](DAA%20LAB/)
-Searching, sorting, divide and conquer, dynamic programming, greedy methods, backtracking and
+Searching, sorting, divide and conquer, dynamic programming, greedy methods, backtracking, branch and bound and
 graph traversal. Every program times its algorithm with `clock()` and counts its basic
 operations. Each file follows the lab-record layout: aim, algorithm, program, sample output.
 

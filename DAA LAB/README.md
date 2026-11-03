@@ -3,9 +3,9 @@
 ![Language](https://img.shields.io/badge/Language-C-blue.svg)
 ![Course](https://img.shields.io/badge/Course-DAA%20Lab-red.svg)
 ![University](https://img.shields.io/badge/University-Royal%20Global%20University-maroon.svg)
-![Programs](https://img.shields.io/badge/Programs-24-green.svg)
+![Programs](https://img.shields.io/badge/Programs-25-green.svg)
 
-> Searching, sorting, DP, greedy, backtracking and graphs — written the plain way — then **timed with `clock()`** so the Big-O
+> Searching, sorting, DP, greedy, backtracking, branch & bound and graphs — written the plain way — then **timed with `clock()`** so the Big-O
 > on the whiteboard shows up as an actual number in your terminal.
 
 Every program here follows the same four beats:
@@ -43,13 +43,14 @@ Every program here follows the same four beats:
 | 19 | [19_travelling_salesman.c](19_travelling_salesman.c) | 🧳 Travelling Salesman (DP) | `O(n²·2ⁿ)` | `O(n²·2ⁿ)` | `O(n²·2ⁿ)` |
 | 20 | [20_bfs.c](20_bfs.c) | 🌊 Breadth First Search | `O(V+E)` | `O(V+E)` | `O(V+E)` |
 | 21 | [21_dfs.c](21_dfs.c) | 🕳️ Depth First Search | `O(V+E)` | `O(V+E)` | `O(V+E)` |
-| 22 | [22_dijkstra.c](22_dijkstra.c) | 🧭 Dijkstra's Shortest Path (Greedy) | `O(V²)` | `O(V²)` | `O(V²)` |
-| 23 | [23_floyd_warshall.c](23_floyd_warshall.c) | 🕸️ Floyd–Warshall All-Pairs Shortest Path (DP) | `O(V³)` | `O(V³)` | `O(V³)` |
-| 24 | [24_bellman_ford.c](24_bellman_ford.c) | ➖ Bellman–Ford Shortest Path (DP) | `O(VE)` | `O(VE)` | `O(VE)` |
+| 22 | [22_job_assignment.c](22_job_assignment.c) | 👷 Job Assignment (Branch & Bound) | `O(n²)` | `O(n!)` | `O(n!)` |
+| 23 | [23_dijkstra.c](23_dijkstra.c) | 🧭 Dijkstra's Shortest Path (Greedy) | `O(V²)` | `O(V²)` | `O(V²)` |
+| 24 | [24_floyd_warshall.c](24_floyd_warshall.c) | 🕸️ Floyd–Warshall All-Pairs Shortest Path (DP) | `O(V³)` | `O(V³)` | `O(V³)` |
+| 25 | [25_bellman_ford.c](25_bellman_ford.c) | ➖ Bellman–Ford Shortest Path (DP) | `O(VE)` | `O(VE)` | `O(VE)` |
 
 BFS and DFS read the graph as an adjacency matrix, which makes them `O(V²)` in practice —
 `O(V+E)` is the adjacency-list bound. Dijkstra uses the same matrix with a linear scan for the
-next vertex; with a binary heap and an adjacency list it drops to `O((V+E) log V)`.
+next vertex; with an adjacency list and a heap it drops to `O(E log V)`.
 
 Each `.c` file is laid out the way it goes into the lab record:
 
@@ -97,7 +98,7 @@ Experiment numbers match the file numbers above.
 ## 🚀 Quick Start
 
 ```bash
-cd ~/Programs/DAA
+cd ~/Programs/"DAA LAB"
 
 gcc -o 05.out 05_insertion.c     # compile
 ./05.out                        # run

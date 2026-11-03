@@ -1,4 +1,4 @@
-// 22. Write a program in c to find the shortest path from a source vertex to all other vertices using Dijkstra's algorithm and find its execution time using the time function.
+// 23. Write a program in c to find the shortest path from a source vertex to all other vertices using Dijkstra's algorithm and find its execution time using the time function.
 
 /*
 Algorithm: DA(G, w, s)
@@ -84,7 +84,8 @@ int main() {
     printf("Enter the source vertex:");
     scanf("%d",&s);
 
-    int order[n+1],trace[n+1][n+1];
+    int order[n+1],pos[n+1],trace[n+1][n+1];
+    char cell[12];
 
     clock_t start=clock();
     initialize_single_source(s);
@@ -97,26 +98,38 @@ int main() {
         u=extract_min();
         q_size--;
         S[u]=1;
+        step++;
+        order[step]=u;
+        pos[u]=step;
+        for(v=1;v<=n;v++)
+            trace[step][v]=d[v];
         for(v=1;v<=n;v++)
             if(w[u][v]!=0)
                 relax(u,v);
-        step++;
-        order[step]=u;
-        for(v=1;v<=n;v++)
-            trace[step][v]=d[v];
     }
     clock_t end=clock();
     double time_taken=(double)(end-start)/CLOCKS_PER_SEC;
 
-    printf("\nStep  u    ");
+    printf("\nS = { }");
+    printf("\nS = {%d}  (source, d[%d] = 0)\n",s,s);
+    printf("\nu     ");
     for(v=1;v<=n;v++)
-        printf("d[%d]  ",v);
+        if(v!=s)
+            printf("%-6d",v);
     printf("S");
-    for(i=1;i<=step;i++) {
-        printf("\n%-6d%-5d",i,order[i]);
+    for(i=2;i<=step;i++) {
+        if(trace[i][order[i]]==INF)
+            break;
+        printf("\n%-6d",order[i]);
         for(v=1;v<=n;v++) {
+            if(v==s)
+                continue;
             if(trace[i][v]==INF)
                 printf("%-6s","INF");
+            else if(pos[v]<=i) {
+                sprintf(cell,"(%d)",trace[i][v]);
+                printf("%-6s",cell);
+            }
             else
                 printf("%-6d",trace[i][v]);
         }
@@ -125,6 +138,7 @@ int main() {
             printf(j==1?"%d":", %d",order[j]);
         printf("}");
     }
+    printf("\n( ) = vertex is in S, its shortest distance is final");
 
     printf("\n\nVertex\tDistance\tPath");
     for(i=1;i<=n;i++) {
@@ -137,37 +151,74 @@ int main() {
     }
     printf("\nNumber of comparisons:%d",count);
     printf("\nTime taken:%f seconds",time_taken);
-    printf("\nTime complexity: O(V^2) with adjacency matrix, O((V+E) log V) with binary heap");
+    printf("\nTime complexity: O(V^2) with adjacency matrix, O(E log V) with adjacency list");
     printf("\nSpace complexity: O(V^2) with adjacency matrix, O(V+E) with adjacency list");
     printf("\n");
     return 0;
 }
 
 
-// Output:
-// Enter the number of vertices:5
-// Enter the 5x5 weight matrix (0 for no edge):
-// 0 10 0 5 0
-// 0 0 1 2 0
-// 0 0 0 0 4
-// 0 3 9 0 2
-// 7 0 6 0 0
+// Output 1:
+// Enter the number of vertices:6
+// Enter the 6x6 weight matrix (0 for no edge):
+// 0 2 4 0 0 0
+// 0 0 1 7 0 0
+// 0 0 0 0 3 0
+// 0 0 0 0 0 1
+// 0 0 0 2 0 5
+// 0 0 0 0 0 0
 // Enter the source vertex:1
+// S = { }
+// S = {1}  (source, d[1] = 0)
 //
-// Step  u    d[1]  d[2]  d[3]  d[4]  d[5]  S
-// 1     1    0     10    INF   5     INF   {1}
-// 2     4    0     8     14    5     7     {1, 4}
-// 3     5    0     8     13    5     7     {1, 4, 5}
-// 4     2    0     8     9     5     7     {1, 4, 5, 2}
-// 5     3    0     8     9     5     7     {1, 4, 5, 2, 3}
+// u     2     3     4     5     6     S
+// 2     (2)   4     INF   INF   INF   {1, 2}
+// 3     (2)   (3)   9     INF   INF   {1, 2, 3}
+// 5     (2)   (3)   9     (6)   INF   {1, 2, 3, 5}
+// 4     (2)   (3)   (8)   (6)   11    {1, 2, 3, 5, 4}
+// 6     (2)   (3)   (8)   (6)   (9)   {1, 2, 3, 5, 4, 6}
+// ( ) = vertex is in S, its shortest distance is final
 //
 // Vertex	Distance	Path
 // 1	0		1
-// 2	8		1 -> 4 -> 2
-// 3	9		1 -> 4 -> 2 -> 3
-// 4	5		1 -> 4
-// 5	7		1 -> 4 -> 5
-// Number of comparisons:35
-// Time taken:0.000003 seconds
-// Time complexity: O(V^2) with adjacency matrix, O((V+E) log V) with binary heap
+// 2	2		1 -> 2
+// 3	3		1 -> 2 -> 3
+// 4	8		1 -> 2 -> 3 -> 5 -> 4
+// 5	6		1 -> 2 -> 3 -> 5
+// 6	9		1 -> 2 -> 3 -> 5 -> 4 -> 6
+// Number of comparisons:44
+// Time taken:0.000002 seconds
+// Time complexity: O(V^2) with adjacency matrix, O(E log V) with adjacency list
+// Space complexity: O(V^2) with adjacency matrix, O(V+E) with adjacency list
+
+// Output 2:
+// Enter the number of vertices:6
+// Enter the 6x6 weight matrix (0 for no edge):
+// 0 50 45 10 0 0
+// 0 0 10 15 0 0
+// 0 0 0 0 30 0
+// 20 0 0 0 15 0
+// 0 20 35 0 0 0
+// 0 0 0 0 3 0
+// Enter the source vertex:1
+// S = { }
+// S = {1}  (source, d[1] = 0)
+//
+// u     2     3     4     5     6     S
+// 4     50    45    (10)  INF   INF   {1, 4}
+// 5     50    45    (10)  (25)  INF   {1, 4, 5}
+// 2     (45)  45    (10)  (25)  INF   {1, 4, 5, 2}
+// 3     (45)  (45)  (10)  (25)  INF   {1, 4, 5, 2, 3}
+// ( ) = vertex is in S, its shortest distance is final
+//
+// Vertex	Distance	Path
+// 1	0		1
+// 2	45		1 -> 4 -> 5 -> 2
+// 3	45		1 -> 3
+// 4	10		1 -> 4
+// 5	25		1 -> 4 -> 5
+// 6	unreachable
+// Number of comparisons:47
+// Time taken:0.000002 seconds
+// Time complexity: O(V^2) with adjacency matrix, O(E log V) with adjacency list
 // Space complexity: O(V^2) with adjacency matrix, O(V+E) with adjacency list

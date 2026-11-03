@@ -1,4 +1,4 @@
-// 23. Write a program in c to find the shortest paths between all pairs of vertices using the Floyd-Warshall algorithm and find its execution time using the time function.
+// 24. Write a program in c to find the shortest paths between all pairs of vertices using the Floyd-Warshall algorithm and find its execution time using the time function.
 
 /*
 Algorithm: FLOYD-WARSHALL(W)
