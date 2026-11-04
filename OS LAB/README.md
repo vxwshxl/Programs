@@ -25,6 +25,7 @@
 ## 📑 Contents
 
 - [⚡ Quick start](#-quick-start)
+- [🗓️ Date-wise index](#%EF%B8%8F-date-wise-index)
 - [📚 All lessons](#-all-lessons)
 - [🖥️ Outputs](#%EF%B8%8F-outputs)
 - [🛠️ Troubleshooting](#%EF%B8%8F-troubleshooting)
@@ -54,6 +55,28 @@ gcc 15_fcfs.c -o 15_fcfs
 
 > [!NOTE]
 > Programs are interactive: type what they ask for and press <kbd>Enter</kbd>. Where a prompt asks for several values (like `85 90 78 92`), type them on one line separated by spaces.
+
+---
+
+## 🗓️ Date-wise index
+
+OS Lab runs every **Wednesday**, from 12 Aug 2026 to 4 Nov 2026. Holidays are skipped.
+
+| Lab | Date | Programs |
+|:--:|:--|:--|
+| 1 | Wed, 12 Aug 2026 | [01](#lesson-1) Add two numbers<br>[02](#lesson-2) Simple interest<br>[03](#lesson-3) Odd or even |
+| 2 | Wed, 19 Aug 2026 | [04](#lesson-4) Factorial<br>[05](#lesson-5) Reverse of a number<br>[06](#lesson-6) Sum of digits |
+| — | ~~Wed, 26 Aug 2026~~ | 🎉 *Holiday: Milad-un-Nabi* |
+| 3 | Wed, 02 Sep 2026 | [07](#lesson-7) Prime check<br>[08](#lesson-8) Fibonacci series<br>[09](#lesson-9) Area of a circle |
+| 4 | Wed, 09 Sep 2026 | [10](#lesson-10) GCD<br>[11](#lesson-11) Sum of 3 digit number<br>[12](#lesson-12) Sum of odd and even (1 to 50) |
+| 5 | Wed, 16 Sep 2026 | [13](#lesson-13) Multiplication table<br>[14](#lesson-14) Circumference of a circle |
+| 6 | Wed, 23 Sep 2026 | [15](#lesson-15) **C:** FCFS scheduling<br>[16](#lesson-16) **C:** Priority scheduling |
+| 7 | Wed, 30 Sep 2026 | [17](#lesson-17) Leap year<br>[18](#lesson-18) Menu with `case`<br>[19](#lesson-19) Swap without a third variable |
+| 8 | Wed, 07 Oct 2026 | [20](#lesson-20) Grade from marks<br>[21](#lesson-21) Power of a number<br>[22](#lesson-22) Factorial using a function |
+| 9 | Wed, 14 Oct 2026 | [23](#lesson-23) Full name<br>[24](#lesson-24) Star pyramid<br>[25](#lesson-25) Number pattern |
+| — | ~~Wed, 21 Oct 2026~~ | 🪔 *Holiday: Durga Puja* |
+| 10 | Wed, 28 Oct 2026 | [26](#lesson-26) Array input<br>[27](#lesson-27) Largest in an array<br>[28](#lesson-28) Pascal's triangle |
+| 11 | Wed, 04 Nov 2026 | [29](#lesson-29) Largest of three<br>[30](#lesson-30) Linux commands |
 
 ---
 
