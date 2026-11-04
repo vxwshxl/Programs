@@ -29,6 +29,7 @@
 - [📚 All lessons](#-all-lessons)
 - [🖥️ Outputs](#%EF%B8%8F-outputs)
 - [🛠️ Troubleshooting](#%EF%B8%8F-troubleshooting)
+- [🎓 Viva notes](VIVA_NOTES.md): every program explained, plus viva questions
 
 ---
 
