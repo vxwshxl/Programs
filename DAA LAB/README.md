@@ -3,9 +3,9 @@
 ![Language](https://img.shields.io/badge/Language-C-blue.svg)
 ![Course](https://img.shields.io/badge/Course-DAA%20Lab-red.svg)
 ![University](https://img.shields.io/badge/University-Royal%20Global%20University-maroon.svg)
-![Programs](https://img.shields.io/badge/Programs-25-green.svg)
+![Programs](https://img.shields.io/badge/Programs-27-green.svg)
 
-> Searching, sorting, DP, greedy, backtracking, branch & bound and graphs — written the plain way — then **timed with `clock()`** so the Big-O
+> Searching, sorting, DP, greedy, backtracking, branch & bound, graphs and spanning trees — written the plain way — then **timed with `clock()`** so the Big-O
 > on the whiteboard shows up as an actual number in your terminal.
 
 Every program here follows the same four beats:
@@ -47,10 +47,14 @@ Every program here follows the same four beats:
 | 23 | [23_dijkstra.c](23_dijkstra.c) | 🧭 Dijkstra's Shortest Path (Greedy) | `O(V²)` | `O(V²)` | `O(V²)` |
 | 24 | [24_floyd_warshall.c](24_floyd_warshall.c) | 🕸️ Floyd–Warshall All-Pairs Shortest Path (DP) | `O(V³)` | `O(V³)` | `O(V³)` |
 | 25 | [25_bellman_ford.c](25_bellman_ford.c) | ➖ Bellman–Ford Shortest Path (DP) | `O(VE)` | `O(VE)` | `O(VE)` |
+| 26 | [26_prims.c](26_prims.c) | 🌲 Prim's Minimum Spanning Tree (Greedy) | `O(V²)` | `O(V²)` | `O(V²)` |
+| 27 | [27_kruskal.c](27_kruskal.c) | 🪢 Kruskal's Minimum Spanning Tree (Greedy) | `O(E²)` | `O(E²)` | `O(E²)` |
 
 BFS and DFS read the graph as an adjacency matrix, which makes them `O(V²)` in practice —
 `O(V+E)` is the adjacency-list bound. Dijkstra uses the same matrix with a linear scan for the
-next vertex; with an adjacency list and a heap it drops to `O(E log V)`.
+next vertex; with an adjacency list and a heap it drops to `O(E log V)`. Prim's works the same way.
+Kruskal sorts its edges with a hand-written insertion sort, so it is `O(E²)` as written —
+swap in merge sort and it reaches the textbook `O(E log E)`.
 
 Each `.c` file is laid out the way it goes into the lab record:
 
