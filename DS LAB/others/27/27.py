@@ -4,7 +4,6 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# Content-based filtering needs no other users - only a description of each item
 movies = pd.DataFrame({
     'Title': ['Inception', 'Interstellar', 'The Matrix', 'Titanic',
               'The Notebook', 'La La Land', 'Avengers', 'Iron Man',
@@ -22,52 +21,10 @@ movies = pd.DataFrame({
         'Superheroes team up to save the world from an alien invasion',
         'A billionaire engineer builds a powered suit and becomes a superhero',
         'Astronauts are stranded in space after an accident and fight to survive',
-        'A love story about pride, class and family in old England'
-    ]
-})
+        'A love story about pride, class and family in old England']})
 
-print("Movies:")
-print(movies[['Title', 'Genre']].to_string(index=False))
+tfidf = TfidfVectorizer(stop_words='english').fit_transform(movies['Genre'] + ' ' + movies['Description'])
+sim = cosine_similarity(tfidf)
 
-# Combine genre and description into one text per movie.
-# Genre is repeated so it counts for more than a single word in the plot.
-movies['Content'] = (movies['Genre'] + ' ') * 2 + movies['Description']
-
-# TF-IDF turns each text into a vector of word weights
-vectorizer = TfidfVectorizer(stop_words='english')
-tfidf_matrix = vectorizer.fit_transform(movies['Content'])
-
-print("\nTF-IDF matrix shape:", tfidf_matrix.shape, "(movies x words)")
-
-# Similarity of every movie to every other movie
-similarity = cosine_similarity(tfidf_matrix)
-
-
-def recommend(title, top_n=3):
-    index = movies.index[movies['Title'] == title][0]
-
-    scores = pd.Series(similarity[index], index=movies['Title'])
-    scores = scores.drop(title).sort_values(ascending=False)
-
-    return scores.head(top_n)
-
-
-for title in ['Interstellar', 'Titanic', 'Iron Man']:
-    print(f"\nBecause you watched {title}:")
-    for movie, score in recommend(title).items():
-        print(f"  {movie:22s} similarity: {score:.3f}")
-
-# Recommend from a user's profile: the average vector of everything they liked
-liked = ['Inception', 'The Matrix']
-liked_rows = movies.index[movies['Title'].isin(liked)]
-
-profile = tfidf_matrix[liked_rows].mean(axis=0)
-profile_scores = cosine_similarity(profile.A, tfidf_matrix)[0]
-
-ranking = pd.Series(profile_scores, index=movies['Title'])
-ranking = ranking.drop(liked).sort_values(ascending=False)
-
-print(f"\nUser liked {liked}")
-print("Recommended for this user:")
-for movie, score in ranking.head(3).items():
-    print(f"  {movie:22s} score: {score:.3f}")
+scores = pd.Series(sim[1], index=movies['Title']).drop('Interstellar').sort_values(ascending=False)
+print("Recommendations for 'Interstellar':\n", scores.head(3).round(3))
