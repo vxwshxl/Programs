@@ -18,3 +18,8 @@ plt.plot(X, model.predict(X), color='red', label="Regression Line")
 plt.title("Simple Linear Regression")
 plt.legend()
 plt.show()
+
+# Output:
+# Slope: 5248.48484848485  Intercept: 24533.333333333325
+# R2 Score: 0.9965768897535254
+# Predicted Salary for 11 years: 82266.66666666667

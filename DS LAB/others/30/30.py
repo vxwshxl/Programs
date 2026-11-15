@@ -11,3 +11,7 @@ for name, model in [('PCA', PCA(n_components=10)), ('SVD', TruncatedSVD(n_compon
     model.fit_transform(X)
     t = time.time() - start
     print(f"{name} Time: {t:.5f}s | Explained Var: {model.explained_variance_ratio_.sum():.4f}")
+
+# Output:
+# PCA Time: 0.00221s | Explained Var: 0.7382
+# SVD Time: 0.00156s | Explained Var: 0.7324

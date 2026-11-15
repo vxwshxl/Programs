@@ -17,3 +17,7 @@ plt.xlabel("PC1")
 plt.ylabel("PC2")
 plt.title("PCA of Wine Dataset")
 plt.show()
+
+# Output:
+# Original Shape: (178, 13)  Reduced Shape: (178, 2)
+# Explained Variance Ratio: [0.36198848 0.1920749 ]

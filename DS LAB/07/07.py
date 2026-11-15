@@ -8,3 +8,7 @@ data = [48, 52, 51, 49, 50, 53, 47, 52, 51, 50]
 mean = np.mean(data)
 print("Mean:", mean)
 print("95% Confidence Interval:", stats.t.interval(0.95, len(data) - 1, loc=mean, scale=stats.sem(data)))
+
+# Output:
+# Mean: 50.3
+# 95% Confidence Interval: (np.float64(48.94900408571514), np.float64(51.650995914284856))

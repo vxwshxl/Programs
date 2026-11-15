@@ -20,3 +20,9 @@ print("Coefficients:", model.coef_)
 print("Intercept:", model.intercept_)
 print("MSE:", mean_squared_error(y_test, y_pred))
 print("R2 Score:", r2_score(y_test, y_pred))
+
+# Output:
+# Coefficients: [2866.65373507 1107.60162076   96.64209664]
+# Intercept: 22505.043320832818
+# MSE: 2101589.657324817
+# R2 Score: 0.9804974976120563

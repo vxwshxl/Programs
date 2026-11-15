@@ -23,3 +23,6 @@ ax[1, 1].set_title("Scatter Plot")
 sns.heatmap(df[['Age', 'Salary']].corr(), annot=True, ax=ax[1, 2]).set_title("Heatmap")
 plt.tight_layout()
 plt.show()
+
+# Output:
+# (graph only - no printed output)

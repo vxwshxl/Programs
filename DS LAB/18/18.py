@@ -11,3 +11,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 for kernel in ['linear', 'poly', 'rbf']:
     svm = SVC(kernel=kernel).fit(X_train, y_train)
     print(f"SVM ({kernel}) Accuracy:", accuracy_score(y_test, svm.predict(X_test)))
+
+# Output:
+# SVM (linear) Accuracy: 1.0
+# SVM (poly) Accuracy: 0.9777777777777777
+# SVM (rbf) Accuracy: 1.0

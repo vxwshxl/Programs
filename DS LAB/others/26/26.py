@@ -21,3 +21,16 @@ similar = sim[user].drop(user).idxmax()
 recs = ratings.loc[similar, ratings.loc[user] == 0].sort_values(ascending=False)
 print(f"\n{user} is most similar to {similar}")
 print(f"Recommended for {user}:", list(recs.index))
+
+# Output:
+# User Similarity Matrix:
+#         Asha  Rahul  Meera  Arjun  Priya  Karan
+# Asha   1.00   0.87   0.80   0.33   0.28   0.87
+# Rahul  0.87   1.00   0.63   0.34   0.20   0.61
+# Meera  0.80   0.63   1.00   0.39   0.44   0.65
+# Arjun  0.33   0.34   0.39   1.00   0.94   0.22
+# Priya  0.28   0.20   0.44   0.94   1.00   0.28
+# Karan  0.87   0.61   0.65   0.22   0.28   1.00
+#
+# Priya is most similar to Arjun
+# Recommended for Priya: ['Avengers', 'Inception']

@@ -20,3 +20,10 @@ stemmed = [PorterStemmer().stem(w) for w in filtered]
 print("Tokens:", tokens)
 print("\nAfter Stop-word Removal:", filtered)
 print("\nAfter Stemming:", stemmed)
+
+# Output:
+# Tokens: ['data', 'science', 'is', 'an', 'interdisciplinary', 'field', 'that', 'uses', 'scientific', 'methods', 'processes', 'algorithms', 'and', 'systems', 'to', 'extract', 'knowledge', 'from', 'data', 'data', 'scientists', 'are', 'analyzing', 'large', 'datasets', 'building', 'predictive', 'models', 'and', 'communicating', 'their', 'findings', 'clearly', 'the', 'studies', 'of', 'machine', 'learning', 'are', 'running', 'everywhere', 'today']
+#
+# After Stop-word Removal: ['data', 'science', 'interdisciplinary', 'field', 'uses', 'scientific', 'methods', 'processes', 'algorithms', 'systems', 'extract', 'knowledge', 'data', 'data', 'scientists', 'analyzing', 'large', 'datasets', 'building', 'predictive', 'models', 'communicating', 'findings', 'clearly', 'studies', 'machine', 'learning', 'running', 'everywhere', 'today']
+#
+# After Stemming: ['data', 'scienc', 'interdisciplinari', 'field', 'use', 'scientif', 'method', 'process', 'algorithm', 'system', 'extract', 'knowledg', 'data', 'data', 'scientist', 'analyz', 'larg', 'dataset', 'build', 'predict', 'model', 'commun', 'find', 'clearli', 'studi', 'machin', 'learn', 'run', 'everywher', 'today']

@@ -13,3 +13,10 @@ df['Name'] = df['Name'].str.strip().str.title()
 s = df['Salary'].where(df['Salary'] > 0)
 df['Salary'] = s.fillna(s.median())
 print(df)
+
+# Output:
+#     Name   Age   Salary
+# 0  Alice  25.0  50000.0
+# 1    Bob  25.0  60000.0
+# 3  David  40.0  50000.0
+# 4    Eve  22.0  45000.0

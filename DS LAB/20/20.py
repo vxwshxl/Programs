@@ -10,3 +10,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 
 nb = GaussianNB().fit(X_train, y_train)
 print("Naive Bayes Accuracy:", accuracy_score(y_test, nb.predict(X_test)))
+
+# Output:
+# Naive Bayes Accuracy: 0.9777777777777777

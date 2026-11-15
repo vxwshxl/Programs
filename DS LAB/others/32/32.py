@@ -22,3 +22,16 @@ scores = cosine_similarity(vectorizer.transform([query]), tfidf)[0]
 print(f"\nTop results for '{query}':")
 for i in scores.argsort()[::-1][:3]:
     print(f"D{i} (Score: {scores[i]:.4f}): {docs[i]}")
+
+# Output:
+# Vocabulary: ['algorithms' 'analysis' 'body' 'brain' 'cup' 'data' 'deep' 'exercise'
+#  'famous' 'fit' 'food' 'football' 'healthy' 'held' 'human' 'inspired'
+#  'language' 'layers' 'learn' 'learning' 'libraries' 'machine' 'make'
+#  'networks' 'neural' 'numpy' 'pandas' 'patterns' 'popular' 'predictions'
+#  'programming' 'python' 'regular' 'science' 'sport' 'tournament' 'uses'
+#  'world' 'years']
+#
+# Top results for 'python data analysis':
+# D3 (Score: 0.6526): Pandas and NumPy are Python libraries for data analysis
+# D0 (Score: 0.3311): Python is a popular programming language for data science and machine learning
+# D1 (Score: 0.1350): Machine learning algorithms learn patterns from data to make predictions

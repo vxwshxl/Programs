@@ -21,3 +21,11 @@ models = {"Logistic Regression": LogisticRegression(), "kNN": KNeighborsClassifi
 for name, model in models.items():
     model.fit(X_train, y_train)
     print(f"{name:20s} Accuracy: {accuracy_score(y_test, model.predict(X_test)):.4f}")
+
+# Output:
+# Logistic Regression  Accuracy: 0.9815
+# kNN                  Accuracy: 0.9630
+# Decision Tree        Accuracy: 0.9630
+# SVM                  Accuracy: 0.9815
+# Random Forest        Accuracy: 1.0000
+# Naive Bayes          Accuracy: 1.0000

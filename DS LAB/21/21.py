@@ -13,3 +13,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random
 model = make_pipeline(StandardScaler(), LogisticRegression()).fit(X_train, y_train)
 print("Logistic Regression Accuracy:", accuracy_score(y_test, model.predict(X_test)))
 print("P(benign) for first test sample:", model.predict_proba(X_test[:1])[0, 1])
+
+# Output:
+# Logistic Regression Accuracy: 0.9790209790209791
+# P(benign) for first test sample: 0.8766704261947693

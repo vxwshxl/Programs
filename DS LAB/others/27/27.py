@@ -28,3 +28,11 @@ sim = cosine_similarity(tfidf)
 
 scores = pd.Series(sim[1], index=movies['Title']).drop('Interstellar').sort_values(ascending=False)
 print("Recommendations for 'Interstellar':\n", scores.head(3).round(3))
+
+# Output:
+# Recommendations for 'Interstellar':
+#  Title
+# Gravity       0.285
+# Avengers      0.106
+# The Matrix    0.064
+# dtype: float64

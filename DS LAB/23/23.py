@@ -13,3 +13,10 @@ plt.scatter(X[:, 0], X[:, 1], c=labels, cmap='viridis')
 plt.scatter(*kmeans.cluster_centers_.T, c='red', marker='X', s=200)
 plt.title("K-Means Clustering")
 plt.show()
+
+# Output:
+# Cluster Centres:
+#  [[-2.63715917  8.98563949]
+#  [-6.84180708 -6.84038791]
+#  [ 4.70253968  2.02807134]
+#  [-8.83330596  7.21790214]]

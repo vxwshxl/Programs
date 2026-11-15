@@ -11,3 +11,6 @@ ax[0].plot(df['Age'], df['Salary'], marker='o')
 ax[0].set_title("Matplotlib Line Plot")
 sns.scatterplot(data=df, x='Age', y='Salary', ax=ax[1]).set_title("Seaborn Scatter Plot")
 plt.show()
+
+# Output:
+# (graph only - no printed output)

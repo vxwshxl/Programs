@@ -11,3 +11,21 @@ X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test
 dt = DecisionTreeClassifier(criterion='gini', max_depth=3, random_state=42).fit(X_train, y_train)
 print("Decision Tree Accuracy:", accuracy_score(y_test, dt.predict(X_test)))
 print("\nDecision Rules:\n" + export_text(dt, feature_names=iris.feature_names))
+
+# Output:
+# Decision Tree Accuracy: 1.0
+#
+# Decision Rules:
+# |--- petal length (cm) <= 2.45
+# |   |--- class: 0
+# |--- petal length (cm) >  2.45
+# |   |--- petal length (cm) <= 4.75
+# |   |   |--- petal width (cm) <= 1.60
+# |   |   |   |--- class: 1
+# |   |   |--- petal width (cm) >  1.60
+# |   |   |   |--- class: 2
+# |   |--- petal length (cm) >  4.75
+# |   |   |--- petal width (cm) <= 1.75
+# |   |   |   |--- class: 1
+# |   |   |--- petal width (cm) >  1.75
+# |   |   |   |--- class: 2

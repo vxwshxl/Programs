@@ -15,3 +15,10 @@ ax[0].set_title("Univariate Normal Distribution")
 ax[1].scatter(multi[:, 0], multi[:, 1], alpha=0.5)
 ax[1].set_title("Multivariate Normal Distribution")
 plt.show()
+
+# Output:
+# Univariate Mean: 49.67332303089289  Std: 9.824210693574127
+# Multivariate Mean: [49.88341838 29.75859401]
+# Multivariate Covariance:
+#  [[103.73097274  55.03180105]
+#  [ 55.03180105  72.89431088]]

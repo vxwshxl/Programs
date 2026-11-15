@@ -17,3 +17,9 @@ for name, m in models.items():
     cv[name] = cross_val_score(m, X, y, cv=5).mean()
     print(f"{name:20s} Test Accuracy: {test:.4f}  5-Fold CV: {cv[name]:.4f}")
 print("Best model:", max(cv, key=cv.get))
+
+# Output:
+# Logistic Regression  Test Accuracy: 0.8480  5-Fold CV: 0.8440
+# kNN                  Test Accuracy: 0.9120  5-Fold CV: 0.9180
+# Decision Tree        Test Accuracy: 0.8720  5-Fold CV: 0.9000
+# Best model: kNN

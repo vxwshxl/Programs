@@ -13,3 +13,11 @@ y_pred = knn.predict(X_test)
 print("kNN Accuracy:", accuracy_score(y_test, y_pred))
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
 print("Prediction for [5.1, 3.5, 1.4, 0.2]:", iris.target_names[knn.predict([[5.1, 3.5, 1.4, 0.2]])[0]])
+
+# Output:
+# kNN Accuracy: 1.0
+# Confusion Matrix:
+#  [[19  0  0]
+#  [ 0 13  0]
+#  [ 0  0 13]]
+# Prediction for [5.1, 3.5, 1.4, 0.2]: setosa

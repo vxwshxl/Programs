@@ -19,3 +19,9 @@ for name, m in [('Ridge', Ridge(alpha=1.0)), ('Lasso', Lasso(alpha=100.0, max_it
     model = make_pipeline(StandardScaler(), m).fit(X_train, y_train)
     print(f"{name} R2 Score:", model.score(X_test, y_test))
     print(f"{name} Coefs:", m.coef_.round(2))
+
+# Output:
+# Ridge R2 Score: 0.9735442276317761
+# Ridge Coefs: [7769.75 3114.27 5702.76 -193.01]
+# Lasso R2 Score: 0.9800886182117426
+# Lasso Coefs: [13465.47  3363.96   408.81    -0.  ]

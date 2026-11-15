@@ -34,3 +34,20 @@ print("\nClassification Report:\n", classification_report(y_test, y_pred))
 
 # 6. Prediction
 print("Prediction for first test patient:", data.target_names[model.predict(X_test[:1])[0]])
+
+# Output:
+# Confusion Matrix:
+#  [[41  2]
+#  [ 1 70]]
+#
+# Classification Report:
+#                precision    recall  f1-score   support
+#
+#            0       0.98      0.95      0.96        43
+#            1       0.97      0.99      0.98        71
+#
+#     accuracy                           0.97       114
+#    macro avg       0.97      0.97      0.97       114
+# weighted avg       0.97      0.97      0.97       114
+#
+# Prediction for first test patient: benign

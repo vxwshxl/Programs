@@ -15,3 +15,15 @@ X_reduced = svd.fit_transform(X)
 print("\nOriginal Shape:", X.shape)
 print("Reduced Shape:", X_reduced.shape)
 print("Variance Kept:", svd.explained_variance_ratio_.sum())
+
+# Output:
+# Singular Values: [5.7605 3.2422 2.7027]
+# Rank-2 Approximation:
+#  [[ 1.9225  0.3353  2.0951]
+#  [-0.9314  3.0423  0.9303]
+#  [ 1.5023  1.693   2.5058]
+#  [ 2.2701  0.7835  2.7092]]
+#
+# Original Shape: (1797, 64)
+# Reduced Shape: (1797, 20)
+# Variance Kept: 0.8940622384867832

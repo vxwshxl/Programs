@@ -10,3 +10,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 
 rf = RandomForestClassifier(n_estimators=100, random_state=42).fit(X_train, y_train)
 print("Random Forest Accuracy:", accuracy_score(y_test, rf.predict(X_test)))
+
+# Output:
+# Random Forest Accuracy: 1.0

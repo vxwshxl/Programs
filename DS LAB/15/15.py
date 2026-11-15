@@ -20,3 +20,13 @@ print("Precision:", precision_score(y_test, y_pred))
 print("Recall:", recall_score(y_test, y_pred))
 print("F1-Score:", f1_score(y_test, y_pred))
 print("ROC-AUC:", roc_auc_score(y_test, y_prob))
+
+# Output:
+# Confusion Matrix:
+#  [[53  1]
+#  [ 2 87]]
+# Accuracy: 0.9790209790209791
+# Precision: 0.9886363636363636
+# Recall: 0.9775280898876404
+# F1-Score: 0.9830508474576272
+# ROC-AUC: 0.9977111943404079
