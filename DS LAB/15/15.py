@@ -1,4 +1,4 @@
-# 15. Write a Python program to evaluate machine learning models using confusion matrix, accuracy, precision, recall, F1-score, and ROC-AUC.
+# 15. Model evaluation: confusion matrix, accuracy, precision, recall, F1, ROC-AUC.
 
 from sklearn.datasets import load_breast_cancer
 from sklearn.model_selection import train_test_split

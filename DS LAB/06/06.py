@@ -1,5 +1,4 @@
-# 6. Write a Python program to perform hypothesis testing
-# using statistical libraries such as SciPy.
+# 6. Hypothesis testing using SciPy.
 
 from scipy import stats
 

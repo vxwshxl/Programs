@@ -1,4 +1,4 @@
-# 14. Write a Python program to perform model selection using train-test split and cross-validation techniques.
+# 14. Model selection using train-test split and cross-validation.
 
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split, cross_val_score

@@ -1,4 +1,4 @@
-# 11. Write a Python program to implement Simple Linear Regression using Scikit-learn.
+# 11. Simple Linear Regression using Scikit-learn.
 
 import pandas as pd
 import matplotlib.pyplot as plt

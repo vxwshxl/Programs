@@ -1,4 +1,4 @@
-# 24. Write a Python program to implement Hierarchical Clustering and visualize the dendrogram.
+# 24. Hierarchical clustering with dendrogram.
 
 import matplotlib.pyplot as plt
 from scipy.cluster.hierarchy import linkage, dendrogram, fcluster

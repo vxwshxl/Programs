@@ -1,4 +1,4 @@
-# 27. Write a Python program to implement a content-based recommendation system.
+# 27. Content-based recommendation system.
 
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer

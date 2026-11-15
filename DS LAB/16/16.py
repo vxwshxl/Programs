@@ -1,4 +1,4 @@
-# 16. Write a Python program to implement the k-Nearest Neighbors (kNN) classification algorithm.
+# 16. k-Nearest Neighbors (kNN) classification.
 
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split

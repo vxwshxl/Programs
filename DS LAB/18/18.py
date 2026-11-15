@@ -1,4 +1,4 @@
-# 18. Write a Python program to implement Support Vector Machine (SVM) classification.
+# 18. Support Vector Machine (SVM) classification.
 
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split

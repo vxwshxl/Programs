@@ -1,5 +1,4 @@
-# 7. Write a Python program to compute confidence intervals
-# for population parameters.
+# 7. Confidence intervals for population parameters.
 
 import numpy as np
 from scipy import stats

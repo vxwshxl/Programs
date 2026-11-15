@@ -1,4 +1,4 @@
-# 19. Write a Python program to implement Random Forest classification.
+# 19. Random Forest classification.
 
 from sklearn.datasets import load_wine
 from sklearn.model_selection import train_test_split

@@ -1,5 +1,4 @@
-# 4. Write a Python program to compute and visualize covariance
-# and correlation matrices for multivariate datasets.
+# 4. Compute and visualize covariance and correlation matrices.
 
 import pandas as pd
 import seaborn as sns

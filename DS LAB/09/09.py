@@ -1,4 +1,4 @@
-# 9. Write a Python program to visualize data using Matplotlib and Seaborn.
+# 9. Visualize data using Matplotlib and Seaborn.
 
 import pandas as pd
 import matplotlib.pyplot as plt

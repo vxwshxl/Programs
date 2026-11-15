@@ -1,4 +1,4 @@
-# 33. Write a Python program to compute document similarity using cosine similarity.
+# 33. Document similarity using cosine similarity.
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity

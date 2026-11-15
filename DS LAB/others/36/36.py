@@ -1,4 +1,4 @@
-# 36. Write a Python program to perform graph partitioning and analyze neighborhood properties.
+# 36. Graph partitioning and neighborhood properties.
 
 import networkx as nx
 from networkx.algorithms.community import kernighan_lin_bisection

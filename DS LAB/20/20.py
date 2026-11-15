@@ -1,4 +1,4 @@
-# 20. Write a Python program to implement Naive Bayes classification.
+# 20. Naive Bayes classification.
 
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split

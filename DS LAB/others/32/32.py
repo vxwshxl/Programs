@@ -1,4 +1,4 @@
-# 32. Write a Python program to implement information retrieval using TF-IDF vectorization.
+# 32. Information retrieval using TF-IDF.
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity

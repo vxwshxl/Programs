@@ -1,4 +1,4 @@
-# 39. Write a Python program to perform exploratory data analysis (EDA) on a real-world dataset.
+# 39. Exploratory Data Analysis (EDA) on a real-world dataset.
 
 import seaborn as sns
 import matplotlib.pyplot as plt

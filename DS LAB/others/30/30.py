@@ -1,4 +1,4 @@
-# 30. Write a Python program to compare the performance of PCA and SVD on a given dataset.
+# 30. Compare PCA and SVD on a dataset.
 
 import time
 from sklearn.datasets import load_digits

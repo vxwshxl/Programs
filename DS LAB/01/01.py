@@ -1,4 +1,4 @@
-# 1. Write a Python program to import and export datasets in CSV, Excel, and JSON formats using the Pandas library.
+# 1. Import and export datasets in CSV, Excel and JSON using Pandas.
 
 import pandas as pd
 

@@ -1,4 +1,4 @@
-# 28. Write a Python program to implement Singular Value Decomposition (SVD) for dimensionality reduction.
+# 28. SVD for dimensionality reduction.
 
 import numpy as np
 from sklearn.datasets import load_digits

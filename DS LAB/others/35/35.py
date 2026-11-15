@@ -1,4 +1,4 @@
-# 35. Write a Python program to detect communities in a social network graph.
+# 35. Community detection in a social network graph.
 
 import networkx as nx
 from networkx.algorithms.community import greedy_modularity_communities

@@ -1,4 +1,4 @@
-# 31. Write a Python program to perform text preprocessing including tokenization, stop-word removal, and stemming.
+# 31. Text preprocessing: tokenization, stop-word removal, stemming.
 
 import nltk
 from nltk.tokenize import word_tokenize

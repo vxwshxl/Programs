@@ -1,4 +1,4 @@
-# 22. Write a Python program to compare the performance of different classification algorithms on the same dataset.
+# 22. Compare classification algorithms on the same dataset.
 
 from sklearn.datasets import load_wine
 from sklearn.model_selection import train_test_split

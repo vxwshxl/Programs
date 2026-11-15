@@ -1,4 +1,4 @@
-# 34. Write a Python program to create and analyze social network graphs using the NetworkX library.
+# 34. Create and analyze social network graphs using NetworkX.
 
 import networkx as nx
 import matplotlib.pyplot as plt

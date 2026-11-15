@@ -1,4 +1,4 @@
-# 25. Write a Python program to compare different clustering algorithms using clustering performance metrics.
+# 25. Compare clustering algorithms using performance metrics.
 
 from sklearn.datasets import make_blobs
 from sklearn.cluster import KMeans, AgglomerativeClustering

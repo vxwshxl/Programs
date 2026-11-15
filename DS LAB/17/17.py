@@ -1,4 +1,4 @@
-# 17. Write a Python program to implement Decision Tree classification.
+# 17. Decision Tree classification.
 
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split

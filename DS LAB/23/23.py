@@ -1,4 +1,4 @@
-# 23. Write a Python program to implement K-Means clustering.
+# 23. K-Means clustering.
 
 import matplotlib.pyplot as plt
 from sklearn.datasets import make_blobs

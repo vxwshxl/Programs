@@ -1,4 +1,4 @@
-# 13. Write a Python program to implement Ridge Regression and Lasso Regression.
+# 13. Ridge and Lasso Regression.
 
 import pandas as pd
 from sklearn.model_selection import train_test_split

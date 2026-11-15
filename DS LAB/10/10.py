@@ -1,5 +1,4 @@
-# 10. Write a Python program to create bar charts, histograms,
-# pie charts, box plots, scatter plots, and heatmaps.
+# 10. Bar chart, histogram, pie chart, box plot, scatter plot and heatmap.
 
 import pandas as pd
 import matplotlib.pyplot as plt

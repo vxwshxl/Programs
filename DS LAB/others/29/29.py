@@ -1,4 +1,4 @@
-# 29. Write a Python program to implement Principal Component Analysis (PCA) for feature extraction and dimensionality reduction.
+# 29. PCA for feature extraction and dimensionality reduction.
 
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_wine

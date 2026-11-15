@@ -1,4 +1,4 @@
-# 37. Write a Python program to create interactive data visualizations using Plotly.
+# 37. Interactive data visualization using Plotly.
 
 import plotly.express as px
 

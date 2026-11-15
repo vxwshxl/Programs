@@ -1,4 +1,4 @@
-# 12. Write a Python program to implement Multiple Linear Regression and evaluate the model.
+# 12. Multiple Linear Regression with model evaluation.
 
 import pandas as pd
 from sklearn.model_selection import train_test_split

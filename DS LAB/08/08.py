@@ -1,5 +1,4 @@
-# 8. Write a Python program to manipulate and transform datasets
-# using the Pandas library.
+# 8. Manipulate and transform datasets using Pandas.
 
 import pandas as pd
 

@@ -1,4 +1,4 @@
-# 26. Write a Python program to develop a recommendation system using collaborative filtering.
+# 26. Recommendation system using collaborative filtering.
 
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity

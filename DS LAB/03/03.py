@@ -1,5 +1,4 @@
-# 3. Write a Python program to perform descriptive statistical analysis
-# including mean, median, mode, variance, standard deviation, and covariance.
+# 3. Descriptive statistics: mean, median, mode, variance, std dev, covariance.
 
 import pandas as pd
 
