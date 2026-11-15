@@ -128,11 +128,11 @@ Fewer dimensions, better suggestions.
 
 | # | File | Experiment |
 |:-:|:-----|:-----------|
-| 26 | [26.py](26/26.py) | 👥 Collaborative filtering |
-| 27 | [27.py](27/27.py) | 🏷️ Content-based recommendation |
-| 28 | [28.py](28/28.py) | 🔢 Singular Value Decomposition (SVD) |
-| 29 | [29.py](29/29.py) | 🎯 Principal Component Analysis (PCA) |
-| 30 | [30.py](30/30.py) | ⚔️ PCA vs. SVD |
+| 26 | [26.py](others/26/26.py) | 👥 Collaborative filtering |
+| 27 | [27.py](others/27/27.py) | 🏷️ Content-based recommendation |
+| 28 | [28.py](others/28/28.py) | 🔢 Singular Value Decomposition (SVD) |
+| 29 | [29.py](others/29/29.py) | 🎯 Principal Component Analysis (PCA) |
+| 30 | [30.py](others/30/30.py) | ⚔️ PCA vs. SVD |
 
 </td></tr>
 <tr><td>
@@ -142,9 +142,9 @@ Words in, vectors out.
 
 | # | File | Experiment |
 |:-:|:-----|:-----------|
-| 31 | [31.py](31/31.py) | ✂️ Tokenization, stop-word removal, stemming |
-| 32 | [32.py](32/32.py) | 🔎 TF-IDF vectorization for information retrieval |
-| 33 | [33.py](33/33.py) | 📐 Cosine similarity between documents |
+| 31 | [31.py](others/31/31.py) | ✂️ Tokenization, stop-word removal, stemming |
+| 32 | [32.py](others/32/32.py) | 🔎 TF-IDF vectorization for information retrieval |
+| 33 | [33.py](others/33/33.py) | 📐 Cosine similarity between documents |
 
 </td></tr>
 <tr><td>
@@ -154,9 +154,9 @@ Nodes, edges, and the cliques between them.
 
 | # | File | Experiment |
 |:-:|:-----|:-----------|
-| 34 | [34.py](34/34.py) | 🔵 Build & analyze graphs with NetworkX |
-| 35 | [35.py](35/35.py) | 🏘️ Community detection |
-| 36 | [36.py](36/36.py) | ✂️ Graph partitioning & neighborhood properties |
+| 34 | [34.py](others/34/34.py) | 🔵 Build & analyze graphs with NetworkX |
+| 35 | [35.py](others/35/35.py) | 🏘️ Community detection |
+| 36 | [36.py](others/36/36.py) | ✂️ Graph partitioning & neighborhood properties |
 
 </td></tr>
 <tr><td>
